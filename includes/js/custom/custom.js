@@ -39,47 +39,24 @@ jQuery(document).ready(function( $ ) {
 		
 		//Accordion Menu
 		$(".header .widget ul,.header .widget select,.header #calendar_wrap,.header .textwidget,.header .tagcloud,.header .widgets .search-form").hide();
-		$('.header .widgettitle').click(function(){
-		    if ($(this).attr('class') != 'widgettitle active'){
+		$('.accordion-toggle').click(function(){
+		    if (!$(this).hasClass("active")) {
 		    
 		      //Hide Widget and Activate Clicked
-		      $('.header-nav').removeClass('header-nav-open');
-		      $('.header .widget ul,nav div,.header .widget select,.header .nav,.header .widget select,#calendar_wrap,.header .textwidget,.header .tagcloud,.header .widgets .search-form').slideUp();
+		      $('.accordion-toggle').next().slideUp();
 		      $(this).next().slideToggle();
 		      
 		      //Add Class To Active Widget
-		      $('.header .widgettitle').removeClass('active');
+		      $('.header .accordion-toggle').removeClass('active');
 		      $(this).addClass('active');
 		      
 		      //Add Class To Open Widget
-		      $('.header .widget').removeClass('open-widget');
+		      $('.header .widget, .header-nav').removeClass('open-widget');
 		      $(this).parent().toggleClass('open-widget');
 		      
 		    }
 	    });
 	    
-	    //Open Main Nav When Clicked
-	    $("nav h2").click(function () {
-	    	
-	    	//Add Open Class
-	    	$('.header-nav').addClass('header-nav-open');
-	    	
-	    	//Open the Menu
-	    	$('.header .nav').slideDown();
-	    	
-	    	//Remove Open Class From Widgets
-	    	$('.header .open-widget').removeClass('open-widget');
-			
-			//Hide Widget Menus
-			$('.header .widget ul').slideUp();
-			
-			//Show Nav Menu
-			$("nav div").slideDown();		
-			return false;
-		});
-		
-		
-		
 		//Replace Scrollbars
 		enquire.register("screen and (min-width: 755px)", function() {
 	        

@@ -156,7 +156,9 @@ register_sidebar(array(
 	'name' => 'Left Sidebar',
 	'description' => 'Widgets in this area will be shown in the sidebar.',
 	'before_widget' => '<div id="%1$s" class="widget %2$s">',
-	'after_widget' => '</div>'
+	'after_widget' => '</div>',
+	'before_title' => '<h2 class="widgettitle accordion-toggle">',
+	'after_title' => '</h2>'
 ));
 
 register_sidebar(array(

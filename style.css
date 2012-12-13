@@ -848,6 +848,10 @@ blockquote {
 	margin-top: -2px;
 }
 
+.header-nav.open-widget {
+	margin-top: 0;
+}
+
 .header .widgettitle {
 	font-size: 13px;
 	font-weight: bold;

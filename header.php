@@ -72,8 +72,8 @@
 				    
 				    <?php } ?>
 				    
-				    <nav role="navigation" class="header-nav header-nav-open">
-				    	<h2><i class="icon-reorder"></i> <?php _e('Navigation','okay'); ?></h2>
+				    <nav role="navigation" class="header-nav open-widget">
+				    	<h2 class="accordion-toggle"><i class="icon-reorder"></i> <?php _e('Navigation','okay'); ?></h2>
 				      	
 				    	<!-- nav menu -->
 				    	<?php wp_nav_menu(array('theme_location' => 'main', 'menu_class' => 'nav')); ?>
