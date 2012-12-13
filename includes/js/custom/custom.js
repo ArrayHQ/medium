@@ -57,6 +57,8 @@ jQuery(document).ready(function( $ ) {
 		    }
 	    });
 	    
+	    
+	    
 		//Replace Scrollbars
 		enquire.register("screen and (min-width: 755px)", function() {
 	        
