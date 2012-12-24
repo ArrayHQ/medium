@@ -59,14 +59,14 @@ add_action( 'wp_enqueue_scripts', 'okay_scripts_styles' );
 
 
 
-//-----------------------------------  // Add Localization //-----------------------------------//
+//-----------------------------------  // Localization //-----------------------------------//
 
-load_theme_textdomain( 'okay', get_template_directory_uri() . '/includes/languages' );
-
-	$locale = get_locale();
-	$locale_file = get_template_directory_uri() . "/includes/languages/$locale.php";
-	if ( is_readable( $locale_file ) )
-		require_once( $locale_file );
+load_theme_textdomain( 'okay', get_template_directory() . '/includes/languages' );
+ 
+$locale = get_locale();
+$locale_file = get_template_directory_uri() . "/includes/languages/$locale.php";
+if ( is_readable($locale_file) )
+	require_once($locale_file);		
 
 
 

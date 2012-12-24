@@ -25,7 +25,7 @@ if ( post_password_required() ) { ?>
 
 <div id="comments">
 	<div id="comments-title">
-		<?php comments_number(__('','okay'),__('<h3>1 Comment</h3>','okay'),__( '<h3>% Comments</h3>','okay') );?>
+		<?php comments_number(__('&nbsp;','okay'),__('<h3>1 Comment</h3>','okay'),__( '<h3>% Comments</h3>','okay') );?>
 	</div>
 
 	<div class="comments-wrap">
