@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Pocket\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-12-24 13:11-0800\n"
-"PO-Revision-Date: 2012-12-24 13:11-0800\n"
+"POT-Creation-Date: 2012-11-27 01:51-0800\n"
+"PO-Revision-Date: 2012-11-27 01:51-0800\n"
 "Last-Translator: \n"
 "Language-Team: Okay Themes\n"
 "Language: en_US\n"
@@ -16,51 +16,47 @@ msgstr ""
 "X-Generator: Poedit 1.5.4\n"
 "X-Poedit-SearchPath-0: ../..\n"
 
-#: ../../404.php:12 ../../404.php:17
+#: ../../404.php:12 ../../404.php:21
 msgid "404 - Page Not Found"
 msgstr ""
 
-#: ../../404.php:22
+#: ../../404.php:26
 msgid ""
 "Sorry, but the page you are looking for has moved or no longer exists. "
 "Please use the search or the archives below to try and locate the page you "
 "were looking for."
 msgstr ""
 
-#: ../../404.php:29 ../../custom-archive.php:49
+#: ../../404.php:33 ../../custom-archive.php:49
 msgid "Archive By Day"
 msgstr ""
 
-#: ../../404.php:36 ../../custom-archive.php:56
+#: ../../404.php:40 ../../custom-archive.php:56
 msgid "Archive By Month"
 msgstr ""
 
-#: ../../404.php:43 ../../custom-archive.php:63
+#: ../../404.php:47 ../../custom-archive.php:63
 msgid "Archive By Year"
 msgstr ""
 
-#: ../../404.php:52 ../../custom-archive.php:72
+#: ../../404.php:56 ../../custom-archive.php:72
 msgid "Latest Posts"
 msgstr ""
 
-#: ../../404.php:61 ../../custom-archive.php:81
+#: ../../404.php:65 ../../custom-archive.php:81
 msgid "Pages"
 msgstr ""
 
-#: ../../404.php:68 ../../custom-archive.php:88
+#: ../../404.php:72 ../../custom-archive.php:88
 msgid "Categories"
 msgstr ""
 
-#: ../../404.php:75 ../../custom-archive.php:95
+#: ../../404.php:79 ../../custom-archive.php:95
 msgid "Contributors"
 msgstr ""
 
 #: ../../comments.php:20
 msgid "This post is password protected. Enter the password to view comments."
-msgstr ""
-
-#: ../../comments.php:28 ../../index.php:8
-msgid "&nbsp;"
 msgstr ""
 
 #: ../../comments.php:28
@@ -83,7 +79,7 @@ msgstr ""
 msgid "Last modified"
 msgstr ""
 
-#: ../../custom-archive.php:29 ../../format-gallery.php:39 ../../page.php:32
+#: ../../custom-archive.php:29 ../../page.php:32
 msgid "by"
 msgstr ""
 
@@ -133,25 +129,25 @@ msgstr ""
 msgid "Tag: "
 msgstr ""
 
-#: ../../functions.php:211
+#: ../../functions.php:188
 #, php-format
 msgid "<cite class=\"fn\">%s</cite>"
 msgstr ""
 
-#: ../../functions.php:213
+#: ../../functions.php:190
 #, php-format
 msgid "%1$s - %2$s"
 msgstr ""
 
-#: ../../functions.php:213
+#: ../../functions.php:190
 msgid "(Edit)"
 msgstr ""
 
-#: ../../functions.php:227
+#: ../../functions.php:204
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: ../../header.php:76
+#: ../../header.php:79
 msgid "Navigation"
 msgstr ""
 
@@ -163,11 +159,11 @@ msgstr ""
 msgid "Archive:"
 msgstr ""
 
-#: ../../index.php:46
+#: ../../index.php:47
 msgid "<i class=\"icon-arrow-left\"></i> Newer Posts"
 msgstr ""
 
-#: ../../index.php:47
+#: ../../index.php:48
 msgid "Older Posts <i class=\"icon-arrow-right\"></i>"
 msgstr ""
 

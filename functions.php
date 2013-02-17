@@ -16,9 +16,7 @@ function okay_scripts_styles() {
 	wp_enqueue_style( 'nanoscroller_css', get_template_directory_uri() . "/includes/js/nanoscroller/nanoscroller.css", array(), '0.1', 'screen' );
 	
 	//Media Queries CSS
-	if ( get_option('okay_theme_customizer_responsive') == 'disabled' ) { } else {
-		wp_enqueue_style( 'media_queries_css', get_template_directory_uri() . "/media-queries.css", array(), '0.1', 'screen' );
-	}
+	wp_enqueue_style( 'media_queries_css', get_template_directory_uri() . "/media-queries.css", array(), '0.1', 'screen' );
 	
 	//Flexslider
 	wp_enqueue_style( 'flexslider_css', get_template_directory_uri() . "/includes/styles/flexslider.css", array(), '0.1', 'screen' );
@@ -59,14 +57,39 @@ add_action( 'wp_enqueue_scripts', 'okay_scripts_styles' );
 
 
 
-//-----------------------------------  // Localization //-----------------------------------//
+//-----------------------------------  // Add Customizer CSS To Header //-----------------------------------//
 
-load_theme_textdomain( 'okay', get_template_directory() . '/includes/languages' );
- 
-$locale = get_locale();
-$locale_file = get_template_directory_uri() . "/includes/languages/$locale.php";
-if ( is_readable($locale_file) )
-	require_once($locale_file);		
+function customizer_css() {
+    ?>
+	<style type="text/css">
+		.entry-text a {
+			color: <?php echo '' .get_theme_mod( 'okay_theme_customizer_link', '#999' )."\n";?> !important;
+		}
+		
+		nav h2 i, .header .widget_categories:before, .header .widget_recent_comments:before, .header .widget_recent_entries:before, .header .widget_meta:before, .header .widget_links:before, .header .widget_archive:before, .widget_pages:before, .widget_calendar:before, .widget_tag_cloud:before, .widget_text:before, .widget_nav_menu:before, .widget_search:before {
+			color: <?php echo '' .get_theme_mod( 'okay_theme_customizer_accent', '#3ac1e8' )."\n";?> !important;
+		}
+		
+		.tagcloud a {
+			background: <?php echo '' .get_theme_mod( 'okay_theme_customizer_accent', '#3ac1e8' )."\n";?> !important;
+		}
+		
+		<?php echo '' .get_theme_mod( 'okay_theme_customizer_css', '' )."\n";?>
+	</style>
+    <?php
+}
+add_action('wp_head', 'customizer_css');
+
+
+
+//-----------------------------------  // Add Localization //-----------------------------------//
+
+load_theme_textdomain( 'okay', get_template_directory_uri() . '/includes/languages' );
+
+	$locale = get_locale();
+	$locale_file = get_template_directory_uri() . "/includes/languages/$locale.php";
+	if ( is_readable( $locale_file ) )
+		require_once( $locale_file );
 
 
 
@@ -85,6 +108,16 @@ function okay_page_has_nav() {
 
 require_once(dirname(__FILE__) . "/customizer.php");
 add_theme_support( 'custom-background' );
+
+
+
+
+//-----------------------------------  // Gallery Support //-----------------------------------//
+
+function okay_theme_setup(){
+	add_theme_support('okay_themes_gallery_support');
+}
+add_action('after_setup_theme', 'okay_theme_setup');
 
 
 
@@ -230,9 +263,6 @@ function okay_comment($comment, $args, $depth) {
 <?php
 }
 
-
-
-
 function okay_cancel_comment_reply_button($html, $link, $text) {
     $style = isset($_GET['replytocom']) ? '' : ' style="display:none;"';
     $button = '<div id="cancel-comment-reply-link"' . $style . '>';
@@ -240,3 +270,41 @@ function okay_cancel_comment_reply_button($html, $link, $text) {
 }
  
 add_action('cancel_comment_reply_link', 'okay_cancel_comment_reply_button', 10, 3);
+
+
+
+
+//-----------------------------------  // Check for Okay Toolkit Notice //-----------------------------------//
+
+if ( !function_exists('okaysocial_init') ) {
+	
+	add_action('admin_notices', 'okay_toolkit_notice');
+	function okay_toolkit_notice() {
+	    global $current_user ;
+	    $user_id = $current_user->ID;
+	    
+	    $adminurl = admin_url('plugin-install.php?tab=plugin-information&plugin=okay-toolkit&TB_iframe=true&width=640&height=589');
+	    
+	    if ( ! get_user_meta($user_id, 'okay_toolkit_ignore_notice') ) { 
+	        echo '<div class="updated"><p>';
+
+	        echo 'This theme supports the Okay Toolkit! Install it to extend the features of your theme. ';
+	        
+	        echo '<a class="thickbox onclick" href=" ' . $adminurl . ' ">Install Now</a> | ';
+	        
+	        printf(__('<a href="%1$s">Hide Notice</a>'), '?okay_toolkit_nag_ignore=0');
+	        
+	        echo "</p></div>";
+	    }
+	}
+	
+	add_action('admin_init', 'okay_toolkit_nag_ignore');
+	function okay_toolkit_nag_ignore() {
+	    global $current_user;
+	        $user_id = $current_user->ID;
+	        /* If user clicks to ignore the notice, add that to their user meta */
+	        if ( isset($_GET['okay_toolkit_nag_ignore']) && '0' == $_GET['okay_toolkit_nag_ignore'] ) {
+	             add_user_meta($user_id, 'okay_toolkit_ignore_notice', 'true', true);
+	    }
+	}
+}
