@@ -5,7 +5,7 @@
 	
 				<!-- titles -->
 				<?php if(is_search()) { ?>
-					<h2 class="archive-title"><?php /* Search Count */ $allsearch = &new WP_Query("s=$s&showposts=-1"); $count = $allsearch->post_count; _e('&nbsp;', 'okay'); echo $count . ' '; wp_reset_query(); ?><?php _e('Results for','okay'); ?> "<?php the_search_query() ?>" </h2>
+					<h2 class="archive-title"><?php /* Search Count */ $allsearch = &new WP_Query("s=$s&showposts=-1"); $count = $allsearch->post_count; _e('', 'okay'); echo $count . ' '; wp_reset_query(); ?><?php _e('Results for','okay'); ?> "<?php the_search_query() ?>" </h2>
 				<?php } else if(is_tag()) { ?>
 					<h2 class="archive-title"><?php single_tag_title(); ?></h2>
 				<?php } else if(is_day()) { ?>

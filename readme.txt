@@ -3,7 +3,7 @@ Theme URI: http://themes.okaythemes.com/medium
 Description: Medium is a neatly designed blog-style theme, perfect for sharing photos, videos, quotes, and thoughts.
 Author: Mike McAlister / Okay Themes
 Author URI: http://okaythemes.com
-Version: 1.0
+Version: 1.1
 Tags: white, gray, three-columns, flexible-width, custom-colors, custom-menu, editor-style, featured-images, post-formats, theme-options, translation-ready, photoblogging, threaded-comments
 License: GNU General Public License v2.0
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -40,7 +40,7 @@ The Contact Page uses the Contact Form 7 plugin, which can grab for free on the 
 * Go to the Contact menu on the left admin menu to configure your contact form. By default they give you a simple form with Name, Email, Subject and Message. To keep things simple, I suggest using the default form. Otherwise, to customize this form even further, check out the Contact Form 7 docs page. 
 
 * After you've configured and saved your contact form in the Contact menu, you will be given a small shortcode like this: [contact-form 1 "Contact form 1"]. Copy this
-shortcode. We'll use this to add the form to our Contact page.</p>
+shortcode. We'll use this to add the form to our Contact page
 
 * Now head back to your Contact page. Paste the Contact 7 shortcode that you copied into the body of the post. Update the post. You should now see the form on the contact page.
 
@@ -73,6 +73,8 @@ Fixed is customizable via the WordPress customizer. Here, you can set a custom b
 * Fixed also gives you the option to use a Retina sized logo. The benefit of this is sharper images on high definition devices. To upload a Retina logo, you need to upload your logo at two times the resolution you normally would. So if your logo is 150px x 150px, you would need to resize your logo to 300px x 300px. The larger image will be served to high definition screens, and will be scaled down accordingly for regular screens. No need for multiple images, Fixed does this on the fly!
 
 * The Accent Color setting will change the accordion menu icons on the left sidebar.
+
+* Add custom CSS to your theme by adding it to the Custom CSS text box.
 
 * When you're finished making changes, click Save & Publish to save the settings.
 
@@ -122,15 +124,20 @@ Fixed makes it easy to share your images and videos. Follow the instructions bel
 
 === Gallery Image Posts ===
 
-* Create a new post and add a title and description.
-
-* Write your content and add whatever styling you want.
-
-* Click the Upload/Insert button. Once the Upload dialog opens, upload all of the images you'd like in your gallery. When finished, you can arrange your images by selecting and dragging them into position. All uploaded images will appear in the slider gallery.
-
-* On the right hand side of your page, you'll see the Format pane. Click Gallery to set the post format.
-
-* Once you've added your images and content, and set the format to Gallery you can publish and preview your post.
+* To use the gallery feature, you must have the latest version of the Okay Toolkit plugin and WordPress 3.5 or newer. Be sure to read the Toolkit setup above and also check out [this quick video](https://vimeo.com/57772300) I made showing how it works
+						
+* To use the awesome new WordPress galleries, you first need to be running WordPress 3.5. Secondly you need to install the Okay Toolkit. See instructions above.
+							
+* Once you have the Okay Toolkit installed, go to Settings -> Okay Toolkit. Enable the [Enable Gallery Feature](http://cl.ly/MJJx) towards the bottom of the page and Save your settings
+							
+* Create a new post and add a title and description
+							
+* On the right hand side of your page, you'll see the Format box. Click Gallery to set the post format and activate the gallery options
+							
+* Under your post editor, you'll see the [Okay Gallery pane](http://cl.ly/MIk4). Click the Edit Gallery button. Once the Edit Featured Gallery dialog opens, upload the images you'd like in your gallery, or select them from images you've already uploaded with the [Add to Gallery link](http://cl.ly/MJTg). Once your images are selected, click Add to Gallery. When finished, you can arrange your images by selecting and dragging them into position. If the theme supports image captions, you can add one in the [Edit Featured Gallery page](http://cl.ly/MJAU)
+							
+* Once you've added your images and content you can publish and preview your post
+							
 
 
 
