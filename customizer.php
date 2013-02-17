@@ -5,6 +5,19 @@
 add_action( 'customize_register', 'okay_theme_customizer_register' );
 
 function okay_theme_customizer_register($wp_customize) {
+
+	class Okay_Customize_Textarea_Control extends WP_Customize_Control {
+	    public $type = 'textarea';
+	 
+	    public function render_content() {
+	        ?>
+	        <label>
+	        <span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
+	        <textarea rows="5" style="width:100%;" <?php $this->link(); ?>><?php echo esc_textarea( $this->value() ); ?></textarea>
+	        </label>
+	        <?php
+	    }
+	}
 	
 	//Style Options
 
@@ -33,24 +46,6 @@ function okay_theme_customizer_register($wp_customize) {
     $wp_customize->add_control( 'retina_select_box', array(
         'settings' => 'okay_theme_customizer_retina',
         'label'   => 'Retina Logo',
-        'section' => 'okay_theme_customizer_basic',
-        'type'    => 'select',
-        'choices'    => array(
-            'enabled' => 'Enabled',
-            'disabled' => 'Disabled',
-        ),
-    ));
-    
-    //Responsive
-	$wp_customize->add_setting('okay_theme_customizer_responsive', array(
-        'default'        => 'enabled',
-        'capability'     => 'edit_theme_options',
-        'type'           => 'option',
-    ));
-    
-    $wp_customize->add_control( 'responsive_select_box', array(
-        'settings' => 'okay_theme_customizer_responsive',
-        'label'   => 'Responsive Stylesheet',
         'section' => 'okay_theme_customizer_basic',
         'type'    => 'select',
         'choices'    => array(
@@ -98,6 +93,17 @@ function okay_theme_customizer_register($wp_customize) {
             'disabled' => 'Disabled',
         ),
     ));
+    
+    //Custom CSS
+	$wp_customize->add_setting( 'okay_theme_customizer_css', array(
+        'default' => '',
+    ) );
+    
+    $wp_customize->add_control( new Okay_Customize_Textarea_Control( $wp_customize, 'okay_theme_customizer_css', array(
+	    'label'   => 'Custom CSS',
+	    'section' => 'okay_theme_customizer_basic',
+	    'settings'   => 'okay_theme_customizer_css',
+	) ) );
 	
 	
 	//Real Time Settings Preview
