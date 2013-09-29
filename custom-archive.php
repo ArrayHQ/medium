@@ -26,7 +26,7 @@ Template Name: Custom Archive
 									<?php if ( get_post_meta($post->ID, 'pagetitle', true) ) { ?>
 										<?php echo get_post_meta($post->ID, 'pagetitle', true) ?>
 									<?php } else { ?>
-										<?php _e('Last modified','okay'); ?> <?php the_modified_date(); ?> <?php _e('by','okay'); ?> <?php the_author_posts_link(); ?>
+										<?php _e('Last modified','medium'); ?> <?php the_modified_date(); ?> <?php _e('by','medium'); ?> <?php the_author_posts_link(); ?>
 									<?php } ?>
 								</div>
 							</div>
@@ -41,26 +41,26 @@ Template Name: Custom Archive
 							
 							<!-- post content -->
 							<div class="post-content">
-								<?php the_content(__( 'Read More','okay')); ?>
+								<?php the_content(__( 'Read More','medium')); ?>
 								
 								<div id="archive">
 									<div class="archive-col">
 										<div class="archive-box">
-											<h4><?php _e('Archive By Day','okay'); ?></h4>
+											<h4><?php _e('Archive By Day','medium'); ?></h4>
 											<ul>
 												<?php wp_get_archives('type=daily&limit=15'); ?>
 											</ul>
 										</div>
 										
 										<div class="archive-box">
-											<h4><?php _e('Archive By Month','okay'); ?></h4>
+											<h4><?php _e('Archive By Month','medium'); ?></h4>
 											<ul>
 												<?php wp_get_archives('type=monthly&limit=12'); ?>
 											</ul>
 										</div>
 										
 										<div class="archive-box">
-											<h4><?php _e('Archive By Year','okay'); ?></h4>
+											<h4><?php _e('Archive By Year','medium'); ?></h4>
 											<ul>
 												<?php wp_get_archives('type=yearly&limit=12'); ?>
 											</ul>
@@ -69,7 +69,7 @@ Template Name: Custom Archive
 									
 									<div class="archive-col">
 										<div class="archive-box">
-											<h4><?php _e('Latest Posts','okay'); ?></h4>
+											<h4><?php _e('Latest Posts','medium'); ?></h4>
 											<ul>
 												<?php wp_get_archives('type=postbypost&limit=20'); ?>
 											</ul>
@@ -78,21 +78,21 @@ Template Name: Custom Archive
 									
 									<div class="archive-col">
 										<div class="archive-box">
-											<h4><?php _e('Pages','okay'); ?></h4>
+											<h4><?php _e('Pages','medium'); ?></h4>
 											<ul>
 												<?php wp_list_pages('sort_column=menu_order&title_li='); ?>
 											</ul>
 										</div>
 										
 										<div class="archive-box">
-											<h4><?php _e('Categories','okay'); ?></h4>
+											<h4><?php _e('Categories','medium'); ?></h4>
 											<ul>
 												<?php wp_list_categories('orderby=name&title_li='); ?> 
 											</ul>
 										</div>
 										
 										<div class="archive-box">
-											<h4><?php _e('Contributors','okay'); ?></h4>
+											<h4><?php _e('Contributors','medium'); ?></h4>
 											<ul>
 												<?php wp_list_authors('show_fullname=1&optioncount=1&orderby=post_count&order=DESC'); ?>
 											</ul>

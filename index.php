@@ -5,11 +5,16 @@
 	
 				<!-- titles -->
 				<?php if(is_search()) { ?>
-					<h2 class="archive-title"><?php /* Search Count */ $allsearch = &new WP_Query("s=$s&showposts=-1"); $count = $allsearch->post_count; _e('', 'okay'); echo $count . ' '; wp_reset_query(); ?><?php _e('Results for','okay'); ?> "<?php the_search_query() ?>" </h2>
+					<h2 class="archive-title">
+						<?php
+							global $wp_query;
+							printf( __( '%d results for "%s"', 'okay' ), $wp_query->found_posts, get_search_query( true ) );
+						?>
+					</h2>
 				<?php } else if(is_tag()) { ?>
 					<h2 class="archive-title"><?php single_tag_title(); ?></h2>
 				<?php } else if(is_day()) { ?>
-					<h2 class="archive-title"><?php _e('Archive:','okay'); ?> <?php echo get_the_date(); ?></h2>
+					<h2 class="archive-title"><?php _e('Archive:','medium'); ?> <?php echo get_the_date(); ?></h2>
 				<?php } else if(is_month()) { ?>
 					<h2 class="archive-title"><?php echo get_the_date('F Y'); ?></h2>
 				<?php } else if(is_year()) { ?>
@@ -17,8 +22,13 @@
 				<?php } else if(is_category()) { ?>
 					<h2 class="archive-title"><?php single_cat_title(); ?></h2>
 				<?php } else if(is_author()) { ?>
-					<h2 class="archive-title"><?php
-					$curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : get_userdata(intval($author)); echo $curauth->display_name; ?></h2>
+					<h2 class="archive-title">
+						<?php
+							the_post();
+							printf( __( 'Author: %s', 'medium' ), '' . get_the_author() . '' );
+							rewind_posts();
+						?>
+					</h2>
 				<?php } ?>
 				
 				<!-- grab the posts -->
@@ -40,11 +50,11 @@
 			</div>
 			
 			<!-- post navigation -->
-			<?php if( okay_page_has_nav() ) : ?>	
-				<div class="post-nav <?php if ( get_option('okay_theme_customizer_infinite') == 'enabled' ) { echo 'infinite'; } ?>">
+			<?php if( medium_page_has_nav() ) : ?>	
+				<div class="post-nav <?php if ( get_option('medium_customizer_infinite') == 'enabled' ) { echo 'infinite'; } ?>">
 					<div class="post-nav-inside">
-						<div class="post-nav-left"><?php previous_posts_link(__('<i class="icon-arrow-left"></i> Newer Posts', 'okay')) ?></div>
-						<div class="post-nav-right"><?php next_posts_link(__('Older Posts <i class="icon-arrow-right"></i>', 'okay')) ?></div>	
+						<div class="post-nav-left"><?php previous_posts_link(__('<i class="icon-arrow-left"></i> Newer Posts', 'medium')) ?></div>
+						<div class="post-nav-right"><?php next_posts_link(__('Older Posts <i class="icon-arrow-right"></i>', 'medium')) ?></div>	
 					</div>
 				</div>
 			<?php endif; ?>

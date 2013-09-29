@@ -4,7 +4,7 @@ Theme URI: http://themes.okaythemes.com/medium
 Description: Medium is a neatly designed blog-style theme, perfect for sharing photos, videos, quotes, and thoughts.
 Author: Mike McAlister / Okay Themes
 Author URI: http://okaythemes.com
-Version: 1.4
+Version: 1.5
 Tags: white, gray, white, one-column, flexible-width, custom-background, custom-colors, custom-menu, editor-style, featured-images, post-formats, theme-options, translation-ready, photoblogging, threaded-comments
 License: GNU General Public License v2.0
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -77,7 +77,9 @@ body {
     padding: 0;
 }
 
-img { border-style: none }
+img { 
+	border-style: none;
+}
 
 a { 
 	color: #b3b3b3;
@@ -391,7 +393,6 @@ footer .search-form .submit {
 
 .logo {
     display: block;
-    text-indent: -9999px;
     margin: 0;
 }
 
@@ -399,6 +400,10 @@ footer .search-form .submit {
 	display: inline-block;
 	margin-bottom: 0;
 	width: 100%;
+}
+
+.js .logo-retina {
+	display: none;
 }
 
 .logo-text {
@@ -440,6 +445,10 @@ footer .search-form .submit {
 
 /* ===[ Navigation Styles ]=== */
 
+.accordion-toggle, .accordion-toggle:focus, .accordion-toggle:active {
+	outline: none;
+}
+
 .header-nav {
 	float: left;
 	width: 100%;
@@ -465,15 +474,7 @@ footer .search-form .submit {
 }
 
 .header-nav:hover {
-	background: #252b2d;
-	border-top: solid 1px transparent;
-	box-shadow: inset rgba(0,0,0, 0.25) 0px 0px 5px;
-	-moz-box-shadow: inset rgba(0,0,0, 0.25) 0px 0px 5px;
-	-webkit-box-shadow: inset rgba(0,0,0, 0.25) 0px 0px 5px;
-	-webkit-transition: .1s ease-in;  
-	-moz-transition: .1s ease-in;  
-	-o-transition: .1s ease-in;  
-	transition: .1s ease-in; 
+	background: #252B2D; 
 }
 
 .header-nav-open {
@@ -511,7 +512,6 @@ footer .search-form .submit {
 .nav > li {
     padding: 0;
     margin: 0;
-    border-bottom: dotted 1px #363636;
     margin-bottom: 5px;
     padding-bottom: 5px;
 }
@@ -812,22 +812,10 @@ blockquote {
 	border-top: solid 1px #373d3f;
 	display: inline-block;
 	width: 100%;
-	-webkit-transition: .1s ease-in;  
-	-moz-transition: .1s ease-in;  
-	-o-transition: .1s ease-in;  
-	transition: .1s ease-in;
 }
 
 .header .widget:hover {
 	background: #252b2d;
-	border-top: solid 1px #1f2426;
-	box-shadow: inset rgba(0,0,0, 0.25) 0px 0px 5px;
-	-moz-box-shadow: inset rgba(0,0,0, 0.25) 0px 0px 5px;
-	-webkit-box-shadow: inset rgba(0,0,0, 0.25) 0px 0px 5px;
-	-webkit-transition: .1s ease-in;  
-	-moz-transition: .1s ease-in;  
-	-o-transition: .1s ease-in;  
-	transition: .1s ease-in;
 }
 
 .header .widget a {

@@ -1,5 +1,5 @@
 jQuery(document).ready(function( $ ) { 
-			
+
 		//Flexslider
 		$('.flexslider').flexslider({
 			animation: "fade",
@@ -10,14 +10,12 @@ jQuery(document).ready(function( $ ) {
 		$(".flex-prev").html('<i class="icon-chevron-left"></i>');
 		
 		
-		
 		//Fitvid
 		function fitvids() {
 			$(".fitvid").fitVids();	
 		}
 		
 		fitvids();
-		
 		
 		
 		//Infinite Scroll
@@ -36,15 +34,14 @@ jQuery(document).ready(function( $ ) {
 		}
 		
 		
-		
 		//Accordion Menu
 		$(".header .widget ul,.header .widget select,.header #calendar_wrap,.header .textwidget,.header .tagcloud,.header .widgets .search-form").hide();
 		$('.accordion-toggle').click(function(){
 		    if (!$(this).hasClass("active")) {
 		    
 		      //Hide Widget and Activate Clicked
-		      $('.accordion-toggle').next().slideUp();
-		      $(this).next().slideToggle();
+		      $('.accordion-toggle').next().slideUp(200);
+		      $(this).next().slideToggle(200);
 		      
 		      //Add Class To Active Widget
 		      $('.header .accordion-toggle').removeClass('active');
@@ -56,7 +53,6 @@ jQuery(document).ready(function( $ ) {
 		      
 		    }
 	    });
-	    
 	    
 	    
 		//Replace Scrollbars
@@ -75,6 +71,11 @@ jQuery(document).ready(function( $ ) {
 	        $('.nano').removeClass('overthrow navigation-content');
 	    }).listen();
 	
-	
-	
+		
+		//Retina Logo
+		$('.logo-retina').each(function(){
+		    $(this).width($(this).width() * 0.5);
+		    $(this).fadeIn(200);
+		});
+
 });

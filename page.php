@@ -29,7 +29,7 @@
 										<?php if ( get_post_meta($post->ID, 'pagetitle', true) ) { ?>
 											<?php echo get_post_meta($post->ID, 'pagetitle', true) ?>
 										<?php } else { ?>
-											<?php _e('Last modified','okay'); ?> <?php the_modified_date(); ?> <?php _e('by','okay'); ?> <?php the_author_posts_link(); ?>
+											<?php _e('Last modified','medium'); ?> <?php the_modified_date(); ?> <?php _e('by','medium'); ?> <?php the_author_posts_link(); ?>
 										<?php } ?>
 									</div>
 								</div>
