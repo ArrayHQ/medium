@@ -12,6 +12,7 @@ jQuery(document).ready(function( $ ) {
 		
 		//Fitvid
 		function fitvids() {
+			$(".post-content iframe").wrap("<div class='fitvid'/>");
 			$(".fitvid").fitVids();	
 		}
 		
