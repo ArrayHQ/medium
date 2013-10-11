@@ -250,7 +250,9 @@ small {
 	width: 100%;
 	border-top: solid 1px #3b4143;
 	padding: 30px 15px;
-}
+	z-index: 100;
+	position: relative;
+}	
 
 /* ===[ Search Form ]=== */
 
