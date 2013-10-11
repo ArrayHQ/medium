@@ -35,27 +35,6 @@ jQuery(document).ready(function( $ ) {
 		}
 		
 		
-		//Accordion Menu
-		$(".header .widget ul,.header .widget select,.header #calendar_wrap,.header .textwidget,.header .tagcloud,.header .widgets .search-form").hide();
-		$('.accordion-toggle').click(function(){
-		    if (!$(this).hasClass("active")) {
-		    
-		      //Hide Widget and Activate Clicked
-		      $('.accordion-toggle').next().slideUp(200);
-		      $(this).next().slideToggle(200);
-		      
-		      //Add Class To Active Widget
-		      $('.header .accordion-toggle').removeClass('active');
-		      $(this).addClass('active');
-		      
-		      //Add Class To Open Widget
-		      $('.header .widget, .header-nav').removeClass('open-widget');
-		      $(this).parent().toggleClass('open-widget');
-		      
-		    }
-	    });
-	    
-	    
 		//Replace Scrollbars
 		enquire.register("screen and (min-width: 755px)", function() {
 	        
@@ -71,6 +50,21 @@ jQuery(document).ready(function( $ ) {
 	    enquire.register("screen and (max-width: 755px)", function() {  
 	        $('.nano').removeClass('overthrow navigation-content');
 	    }).listen();
+
+
+	    //Menu Toggle
+		$(".menu-toggle").click(function() { 
+		  $(".header-nav, .header .widgets").slideToggle(100);
+		  return false;
+		});
+
+		$( window ).resize( function() {
+			var browserWidth = $( window ).width();
+
+			if ( browserWidth > 768 ) {
+				$(".header-nav, .header .widgets").show();
+			} 
+		} );
 	
 		
 		//Retina Logo

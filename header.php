@@ -55,8 +55,6 @@
 				    <?php } ?>
 				    
 				    <nav role="navigation" class="header-nav open-widget">
-				    	<h2 class="accordion-toggle"><i class="icon-reorder"></i> <?php _e('Navigation','medium'); ?></h2>
-				      	
 				    	<!-- nav menu -->
 				    	<?php wp_nav_menu( array( 'theme_location' => 'main', 'menu_class' => 'nav' ) ); ?>
 				    </nav>

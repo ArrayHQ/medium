@@ -7,9 +7,7 @@
 	
 	.header {
 		width: 200px;
-	}
-	
-	.title-meta-left {
+		font-size: 13px;
 	}
 	
 	.post .box {
@@ -57,11 +55,11 @@
 	}
 	
 	footer .widget {
-		padding: 25px 8% 30px 8%;
+		padding: 20px 20px 30px 20px;
 	}
 	
 	.copyright {
-		padding: 32px 8%;
+		padding: 25px 8%;
 	}
 }
 
@@ -83,6 +81,26 @@
     .header hgroup {
 	    float: none;
     }
+
+    .header-nav, .header .widgets {
+    	display: none;
+    }
+
+    .header-nav {
+    	padding-top: 0;
+    }
+
+    .header-search .menu-toggle {
+    	display: inline-block;
+    	float: right;
+    	margin-top: 4px;
+    	font-size: 20px;
+    	color: #fff;
+    }
+
+    .header .search-form-input {
+		width: 88%;
+	}
     
     .logo-text {
 	    font-size: 28px;

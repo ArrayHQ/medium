@@ -4,11 +4,17 @@ Theme URI: http://themes.okaythemes.com/medium
 Description: Medium is a neatly designed blog-style theme, perfect for sharing photos, videos, quotes, and thoughts.
 Author: Mike McAlister / Okay Themes
 Author URI: http://okaythemes.com
-Version: 1.6
+Version: 1.7
 Tags: white, gray, white, one-column, flexible-width, custom-background, custom-colors, custom-menu, editor-style, featured-images, post-formats, theme-options, translation-ready, photoblogging, threaded-comments
 License: GNU General Public License v2.0
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
+
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
 
 html, body {
 	overflow-x: hidden;
@@ -119,9 +125,6 @@ input[type="text"], textarea {
     background: #fff;
     width: 100%;
     padding: 10px;
-    -webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
     -webkit-border-radius: 3px; 
 	-moz-border-radius: 3px; 
 	border-radius: 3px;
@@ -231,17 +234,15 @@ small {
 /* ===[ Header Area Styles ]=== */
 
 .header {
+	color: #6B7072;
 	position: fixed;
 	background: #303739 url(images/sidebar.jpg);
 	z-index: 10;
 	width: 250px;
 	height: 100%;
 	float: left;
-	font-size: 13px;
+	font-size: 14px;
 	line-height: 24px;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
 }
 
 .header hgroup {
@@ -249,9 +250,6 @@ small {
 	width: 100%;
 	border-top: solid 1px #3b4143;
 	padding: 30px 15px;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
 }
 
 /* ===[ Search Form ]=== */
@@ -271,9 +269,6 @@ small {
 	padding: 10px;
 	font-size: 20px;
 	width: 100%;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
 }
 
 .error404 .post .search-form .submit {
@@ -288,10 +283,8 @@ small {
 
 .header .search-form-input {
 	position: relative;
+	display: inline-block;
 	width: 100%;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
 	border: none !important;
 	padding: 8px 8px 8px 26px !important;
 	font-size: 11px;
@@ -320,9 +313,6 @@ small {
 .header .search-form {
 	margin: 0;
 	padding: 16px 15px;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
 	border-bottom: solid 1px #262627;
 }
 
@@ -340,9 +330,6 @@ small {
 	transition: .07s ease-in; 
 	border-top: solid 1px #212628;
 	border-bottom: solid 1px #373d3f;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
 	z-index: 10;
 }
 
@@ -445,49 +432,13 @@ footer .search-form .submit {
 
 /* ===[ Navigation Styles ]=== */
 
-.accordion-toggle, .accordion-toggle:focus, .accordion-toggle:active {
-	outline: none;
+.menu-toggle {
+	display: none;
 }
 
 .header-nav {
-	float: left;
-	width: 100%;
-	margin: 0;
-	padding: 10px 14px;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-	background: #2a3033; /* Old browsers */
-	background: -moz-linear-gradient(top,  #2a3033 0%, #272d2f 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#2a3033), color-stop(100%,#272d2f)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  #2a3033 0%,#272d2f 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  #2a3033 0%,#272d2f 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  #2a3033 0%,#272d2f 100%); /* IE10+ */
-	background: linear-gradient(to bottom,  #2a3033 0%,#272d2f 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2a3033', endColorstr='#272d2f',GradientType=0 ); /* IE6-9 */
-	border-bottom: solid 1px #212628;
-	border-top: solid 1px #373d3f;
-	-webkit-transition: .1s ease-in;  
-	-moz-transition: .1s ease-in;  
-	-o-transition: .1s ease-in;  
-	transition: .1s ease-in; 
-}
-
-.header-nav:hover {
-	background: #252B2D; 
-}
-
-.header-nav-open {
-	background: #202527;
-	box-shadow: inset rgba(0,0,0, 0.2) 0px 0px 5px;
-	-moz-box-shadow: inset rgba(0,0,0, 0.2) 0px 0px 5px;
-	-webkit-box-shadow: inset rgba(0,0,0, 0.2) 0px 0px 5px;
-	border-top: solid 1px transparent;
-	border-bottom: solid 1px transparent;
-}
-
-.header-nav-open:hover {
-	background: #202527;
+	border-bottom: solid 1px #262627;
+	padding: 20px 20px 20px 20px;
 }
 
 .header-nav div {
@@ -496,7 +447,7 @@ footer .search-form .submit {
 }
 
 .nav a {
-    color: #666;
+    color: #6B7072;
 }
 
 .nav a:hover {
@@ -513,7 +464,6 @@ footer .search-form .submit {
     padding: 0;
     margin: 0;
     margin-bottom: 5px;
-    padding-bottom: 5px;
 }
 
 .nav >li:last-child {
@@ -523,7 +473,6 @@ footer .search-form .submit {
 }
 
 .nav {
-	margin: 8px 0 10px 0!important;
 }
 
 .nav, .nav ul {
@@ -577,9 +526,6 @@ nav h2 i {
     position: relative;
     width: 100%;
     padding: 0 250px 50px 250px;
-    -webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
 }
 
 #wrapper a:hover {
@@ -642,18 +588,12 @@ nav h2 i {
 .post .box-wrap {
 	display: inline-block;
 	width: 100%;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
 }
 
 .post .box { 
 	position: relative;
 	margin: 0 auto;
 	padding: 32px 14% 15px 14%;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
 }
 
 .page .post .box {
@@ -664,9 +604,6 @@ nav h2 i {
 	width: 100%;
 	float: left;
 	padding: 0 0 0 0;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
 }
 
 .post .post-content ul, .post .post-content ol {
@@ -679,9 +616,6 @@ nav h2 i {
 
 .post .more-link {
 	width: 100%;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
 	display: inline-block;
 }
 
@@ -780,9 +714,6 @@ blockquote {
 	font-size: 20px;
 	line-height: 30px;
 	color: #aaa;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
 	border-left: solid 10px #eee;
 }
 
@@ -791,53 +722,25 @@ blockquote {
 .header .widgets {
 	display: inline-block;
 	width: 100%;
+	padding-bottom: 20px;
 }
 
 .header .widget {
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-	position: relative;
-	padding: 10px 14px;
-	background: #2a3033; /* Old browsers */
-	background: -moz-linear-gradient(top,  #2a3033 0%, #272d2f 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#2a3033), color-stop(100%,#272d2f)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  #2a3033 0%,#272d2f 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  #2a3033 0%,#272d2f 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  #2a3033 0%,#272d2f 100%); /* IE10+ */
-	background: linear-gradient(to bottom,  #2a3033 0%,#272d2f 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2a3033', endColorstr='#272d2f',GradientType=0 ); /* IE6-9 */
-	color: #aaa;
-	border-bottom: solid 1px #212628;
-	border-top: solid 1px #373d3f;
-	display: inline-block;
-	width: 100%;
+	padding: 25px 20px 15px 20px;
+	border-bottom: solid 1px #262627;
+	border-top: solid 1px #3B4143;
 }
 
-.header .widget:hover {
-	background: #252b2d;
+.header .widget:last-child {
+	border-bottom: none;
 }
 
 .header .widget a {
-	color: #666;
+	color: #6B7072;
 }
 
 .header .widget a:hover {
 	color: #fff;
-}
-
-.open-widget {
-	background: #202527 !important;
-	box-shadow: inset rgba(0,0,0, 0.25) 0px 0px 10px;
-	-moz-box-shadow: inset rgba(0,0,0, 0.25) 0px 0px 10px;
-	-webkit-box-shadow: inset rgba(0,0,0, 0.25) 0px 0px 10px;
-	border-top: solid 1px #1f1f1f !important;
-	border-bottom: none !important;
-	margin-top: -2px;
-}
-
-.header-nav.open-widget {
-	margin-top: 0;
 }
 
 .header .widgettitle {
@@ -847,173 +750,21 @@ blockquote {
 	color: #fff;
 }
 
-.header .widgettitle:hover {
-	cursor: pointer;
-}
-
 .header .widget ul {
 	margin: 10px 0 15px 0;
 	padding-right: 20px;
 }
 
 .header .widget ul li {
-	border-bottom: dotted 1px #363636;
-	margin-bottom: 5px;
-	padding-bottom: 5px;
+	border-bottom: solid 1px rgba(255,255,255,.08);
+	margin-bottom: 8px;
+	padding-bottom: 8px;
 }
 
 .header .widget ul li:last-child {
 	border-bottom: none;
 	padding-bottom: 0;
 	margin-bottom: 0;
-}
-
-.header .widget .widgettitle {
-	padding-left: 18px;
-}
-
-/* ===[ Recent Post Widget Styles ]=== */
-
-.header .widget_recent_entries {
-	position: relative;
-	padding-left: 14px;
-}
-
-.header .widget_recent_entries:before {
-	position: absolute;
-	top: 16px;
-	left: 15px;
-	font-family: "FontAwesome";
-	-webkit-font-smoothing: antialiased;
-	font-size: 13px;
-	color: #3ac1e8;
-	content: "\f017";
-}
-
-/* ===[ Recent Comment Widget Styles ]=== */
-
-.header .widget_recent_comments {
-	position: relative;
-	padding-left: 14px;
-}
-
-.header .widget_recent_comments:before {
-	position: absolute;
-	top: 16px;
-	left: 15px;
-	font-family: "FontAwesome";
-	-webkit-font-smoothing: antialiased;
-	font-size: 13px;
-	color: #3ac1e8;
-	content: "\f075";
-}
-
-/* ===[ Custom Menu Widget Styles ]=== */
-
-.header .widget_nav_menu {
-	position: relative;
-	padding-left: 14px;
-}
-
-.header .widget_nav_menu:before {
-	position: absolute;
-	top: 16px;
-	left: 15px;
-	font-family: "FontAwesome";
-	-webkit-font-smoothing: antialiased;
-	font-size: 13px;
-	color: #3ac1e8;
-	content: "\f0c1";
-}
-
-/* ===[ Category Widget Styles ]=== */
-
-.header .widget_categories {
-	position: relative;
-	padding-left: 14px;
-}
-
-.header .widget_categories:before {
-	position: absolute;
-	top: 16px;
-	left: 15px;
-	font-family: "FontAwesome";
-	-webkit-font-smoothing: antialiased;
-	font-size: 13px;
-	color: #3ac1e8;
-	content: "\f03a";
-}
-
-/* ===[ Meta Widget Styles ]=== */
-
-.header .widget_meta {
-	position: relative;
-	padding-left: 14px;
-}
-
-.header .widget_meta:before {
-	position: absolute;
-	top: 16px;
-	left: 15px;
-	font-family: "FontAwesome";
-	-webkit-font-smoothing: antialiased;
-	font-size: 13px;
-	color: #3ac1e8;
-	content: "\f022";
-}
-
-/* ===[ Blogroll Widget Styles ]=== */
-
-.header .widget_links, .header .widget_pages {
-	position: relative;
-	padding-left: 14px;
-}
-
-.header .widget_links:before, .header .widget_pages:before {
-	position: absolute;
-	top: 16px;
-	left: 15px;
-	font-family: "FontAwesome";
-	-webkit-font-smoothing: antialiased;
-	font-size: 13px;
-	color: #3ac1e8;
-	content: "\f0c1";
-}
-
-/* ===[ Archive Widget Styles ]=== */
-
-.header .widget_archive {
-	position: relative;
-	padding-left: 14px;
-}
-
-.header .widget_archive:before {
-	position: absolute;
-	top: 16px;
-	left: 15px;
-	font-family: "FontAwesome";
-	-webkit-font-smoothing: antialiased;
-	font-size: 13px;
-	color: #3ac1e8;
-	content: "\f07b";
-}
-
-/* ===[ Calendar Widget Styles ]=== */
-
-.header .widget_calendar {
-	position: relative;
-	padding-left: 14px;
-}
-
-.header .widget_calendar:before {
-	position: absolute;
-	top: 16px;
-	left: 15px;
-	font-family: "FontAwesome";
-	-webkit-font-smoothing: antialiased;
-	font-size: 13px;
-	color: #3ac1e8;
-	content: "\f073";
 }
 
 #wp-calendar {
@@ -1026,22 +777,6 @@ blockquote {
 
 /* ===[ Text Widget Styles ]=== */
 
-.header .widget_text {
-	position: relative;
-	padding-left: 14px;
-}
-
-.header .widget_text:before {
-	position: absolute;
-	top: 16px;
-	left: 15px;
-	font-family: "FontAwesome";
-	-webkit-font-smoothing: antialiased;
-	font-size: 13px;
-	color: #3ac1e8;
-	content: "\f016";
-}
-
 .textwidget {
 	word-wrap: break-word;
 }
@@ -1049,6 +784,10 @@ blockquote {
 .textwidget img {
 	max-width: 100%;
 	height: auto;
+}
+
+.header select {
+	width: 100%;
 }
 
 /* ===[ RSS Widget Styles ]=== */
@@ -1067,46 +806,13 @@ blockquote {
 	position: relative;
 }
 
-.header .widgets .widget_search:before {
-	position: absolute;
-	top: 16px;
-	left: 15px;
-	font-family: "FontAwesome";
-	-webkit-font-smoothing: antialiased;
-	font-size: 13px;
-	color: #3ac1e8;
-	content: "\f002";
-}
-
-.header .widgets .widget_search h2 {
-	padding-left: 18px;
-}
-
 .header .widgets .search-form-input {
 	padding-left: 12px !important;
-	background: #111;
+	background: #202527;
 }
 
 .header .widgets .search-form fieldset:before {
 	display: none;
-}
-
-/* ===[ Tag Cloud Widget Styles ]=== */
-
-.header .widgets .widget_tag_cloud {
-	position: relative;
-	padding-left: 14px;
-}
-
-.header .widgets .widget_tag_cloud:before {
-	position: absolute;
-	top: 16px;
-	left: 15px;
-	font-family: "FontAwesome";
-	-webkit-font-smoothing: antialiased;
-	font-size: 13px;
-	color: #3ac1e8;
-	content: "\f02c";
 }
 
 /* ===[ Content Styles ]=== */
@@ -1262,9 +968,6 @@ blockquote {
 	width: 100%;
 	margin: 0 auto;
 	padding: 50px 14% 0 14%;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
 }
 
 #comments-title h3 {
@@ -1342,9 +1045,6 @@ blockquote {
     background: #fff;
     width: 100%;
     padding: 9px 10px;
-    -webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
     -webkit-border-radius: 3px; 
 	-moz-border-radius: 3px; 
 	border-radius: 3px;
@@ -1363,9 +1063,6 @@ blockquote {
 #respond textarea {
     line-height: 22px;
     width: 100%;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
 }
 
 #commentform #submit {
@@ -1439,9 +1136,6 @@ blockquote {
     border-bottom: solid 1px #e5e5e5;
     position: relative;
     list-style:none;
-    -webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
 }
 
 .commentlist li:last-child {
@@ -1628,9 +1322,6 @@ blockquote {
 	font-size: 12px;
 	font-weight: bold;
 	text-transform: uppercase;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
 	border-bottom: solid 1px #e7e7e7;
 }
 
@@ -1683,20 +1374,14 @@ footer {
 	float: right;
 	font-size: 12px;
 	line-height: 20px;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
 }
 
 footer .widget {
 	width: 100%;
 	display: inline-block;
-	padding: 25px 32px 30px 32px;
+	padding: 25px 20px 30px 20px;
 	border-bottom: solid 1px #e4e4e4;
 	border-top: solid 1px #f7f7f7;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
 }
 
 footer .widgettitle {
@@ -1739,7 +1424,7 @@ footer .icons {
 
 .copyright {
 	margin: 0;
-	padding: 32px;
+	padding: 32px 20px;
 	font-size: 11px;
 	color: #bbb;
 	border-top: solid 1px #f7f7f7;
@@ -1850,9 +1535,6 @@ input[type="text"], input[type="email"], textarea {
     background: #fff;
     width: 100%;
     padding: 10px;
-    -webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
     -webkit-border-radius: 3px; 
 	-moz-border-radius: 3px; 
 	border-radius: 3px;
