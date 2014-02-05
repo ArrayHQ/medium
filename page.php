@@ -38,7 +38,9 @@
 									<h1 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h1>
 								</header>
 							
-								<?php the_content(); ?>	
+								<div class="entry-text">
+									<?php the_content(); ?>
+								</div>
 							</div><!-- post content -->
 						</div><!-- box -->
 					</div><!-- box wrap -->

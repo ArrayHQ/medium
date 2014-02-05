@@ -30,7 +30,7 @@ $theme_license = trim( get_option( 'medium_activate_license' ) );
 
 $edd_updater = new EDD_SL_Theme_Updater( array(
 		'remote_api_url' 	=> MEDIUM_EDD_SL_STORE_URL, 	// Our store URL that is running EDD
-		'version' 			=> '1.7', 				// The current theme version we are running
+		'version' 			=> '1.9', 				// The current theme version we are running
 		'license' 			=> $theme_license, 		// The license key (used get_option above to retrieve from DB)
 		'item_name' 		=> MEDIUM_EDD_SL_THEME_NAME,	// The name of this theme
 		'author'			=> 'Okay Themes'	// The author's name

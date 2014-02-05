@@ -4,7 +4,7 @@ Theme URI: http://themes.okaythemes.com/medium
 Description: Medium is a neatly designed blog-style theme, perfect for sharing photos, videos, quotes, and thoughts.
 Author: Mike McAlister / Okay Themes
 Author URI: http://okaythemes.com
-Version: 1.7
+Version: 1.9
 Tags: white, gray, white, one-column, flexible-width, custom-background, custom-colors, custom-menu, editor-style, featured-images, post-formats, theme-options, translation-ready, photoblogging, threaded-comments
 License: GNU General Public License v2.0
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -562,6 +562,10 @@ nav h2 i {
 
 .post .fitvid, .post .featured-image, .post .gallery-wrap {
 	margin-top: -31px;
+}
+
+.post .entry-text .fitvid {
+	margin-top: 0;
 }
 
 .single .post .fitvid, .page .post .fitvid, .single .post .featured-image, .page .post .featured-image, .single .post .gallery-wrap, .post:first-child .fitvid, .post:first-child .featured-image, .post:first-child .gallery-wrap {
