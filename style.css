@@ -4,7 +4,7 @@ Theme URI: http://themes.okaythemes.com/medium
 Description: Medium is a neatly designed blog-style theme, perfect for sharing photos, videos, quotes, and thoughts.
 Author: Mike McAlister / Okay Themes
 Author URI: http://okaythemes.com
-Version: 1.9
+Version: 1.9.1
 Tags: white, gray, white, one-column, flexible-width, custom-background, custom-colors, custom-menu, editor-style, featured-images, post-formats, theme-options, translation-ready, photoblogging, threaded-comments
 License: GNU General Public License v2.0
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -83,25 +83,25 @@ body {
     padding: 0;
 }
 
-img { 
+img {
 	border-style: none;
 }
 
-a { 
+a {
 	color: #b3b3b3;
 	text-decoration: none;
-	-webkit-transition: .07s ease-in;  
-	-moz-transition: .07s ease-in;  
-	-o-transition: .07s ease-in;  
+	-webkit-transition: .07s ease-in;
+	-moz-transition: .07s ease-in;
+	-o-transition: .07s ease-in;
 	transition: .07s ease-in;
 }
 
-a:hover { 
+a:hover {
 	color: #555;
 	text-decoration: none;
-	-webkit-transition: .07s ease-in;  
-	-moz-transition: .07s ease-in;  
-	-o-transition: .07s ease-in;  
+	-webkit-transition: .07s ease-in;
+	-moz-transition: .07s ease-in;
+	-o-transition: .07s ease-in;
 	transition: .07s ease-in;
 }
 
@@ -125,8 +125,8 @@ input[type="text"], textarea {
     background: #fff;
     width: 100%;
     padding: 10px;
-    -webkit-border-radius: 3px; 
-	-moz-border-radius: 3px; 
+    -webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
 	border-radius: 3px;
 	-webkit-appearance:none;
 }
@@ -155,10 +155,10 @@ submit {
 	-o-box-shadow: 0px 2px 2px rgba(0,0,0,0.027), inset 0px 1px 0px rgba(255,255,255,0.69), inset 0px -1px 0px rgba(0,0,0,0.0187), inset 0px 16px 15px rgba(255,255,255,0.57);
 	box-shadow: 0px 2px 2px rgba(0,0,0,0.027), inset 0px 1px 0px rgba(255,255,255,0.69), inset 0px -1px 0px rgba(0,0,0,0.0187), inset 0px 16px 15px rgba(255,255,255,0.57);
 	-webkit-appearance: none;
-	-webkit-transition: .1s ease-in;  
-	-moz-transition: .1s ease-in;  
-	-o-transition: .1s ease-in;  
-	transition: .1s ease-in; 
+	-webkit-transition: .1s ease-in;
+	-moz-transition: .1s ease-in;
+	-o-transition: .1s ease-in;
+	transition: .1s ease-in;
 }
 
 submit:hover {
@@ -168,18 +168,18 @@ submit:hover {
 	-moz-box-shadow: 0px 2px 2px rgba(0,0,0,0.027), inset 0px 1px 0px rgba(255,255,255,0.69), inset 0px -1px 0px rgba(0,0,0,0.0187), inset 0px 16px 15px rgba(255,255,255,0.75);
 	-o-box-shadow: 0px 2px 2px rgba(0,0,0,0.027), inset 0px 1px 0px rgba(255,255,255,0.69), inset 0px -1px 0px rgba(0,0,0,0.0187), inset 0px 16px 15px rgba(255,255,255,0.75);
 	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.027), inset 0px 1px 0px rgba(255, 255, 255, 0.69), inset 0px -1px 0px rgba(0, 0, 0, 0.0187), inset 0px 16px 15px rgba(255, 255, 255, 0.75);
-	-webkit-transition: .1s ease-in;  
-	-moz-transition: .1s ease-in;  
-	-o-transition: .1s ease-in;  
-	transition: .1s ease-in; 
+	-webkit-transition: .1s ease-in;
+	-moz-transition: .1s ease-in;
+	-o-transition: .1s ease-in;
+	transition: .1s ease-in;
 }
 
 submit:active {
-	border: 1px solid #d2d2d2; 
-	border-bottom: 1px solid #d8d8d8; 
+	border: 1px solid #d2d2d2;
+	border-bottom: 1px solid #d8d8d8;
 	border-radius: 3px; -webkit-box-shadow: 0px 1px 0px rgba(255,255,255,0.58), inset 0px 1px 6px rgba(0,0,0,0.07), inset 0px -16px 15px rgba(255,255,255,0.20); -moz-
-	box-shadow: 0px 1px 0px rgba(255,255,255,0.58), inset 0px 1px 6px rgba(0,0,0,0.07), inset 0px -16px 15px rgba(255,255,255,0.20); -o-box-shadow: 0px 1px 0px rgba(255,255,255,0.58), inset 0px 1px 6px rgba(0,0,0,0.07), inset 0px -16px 15px rgba(255,255,255,0.20); 
-	box-shadow: 0px 1px 0px rgba(255,255,255,0.58), inset 0px 1px 6px rgba(0,0,0,0.07), inset 0px -16px 15px rgba(255,255,255,0.20); 
+	box-shadow: 0px 1px 0px rgba(255,255,255,0.58), inset 0px 1px 6px rgba(0,0,0,0.07), inset 0px -16px 15px rgba(255,255,255,0.20); -o-box-shadow: 0px 1px 0px rgba(255,255,255,0.58), inset 0px 1px 6px rgba(0,0,0,0.07), inset 0px -16px 15px rgba(255,255,255,0.20);
+	box-shadow: 0px 1px 0px rgba(255,255,255,0.58), inset 0px 1px 6px rgba(0,0,0,0.07), inset 0px -16px 15px rgba(255,255,255,0.20);
 }
 
 hr {
@@ -198,32 +198,32 @@ h1, h2, h3, h4, h5, h6 {
     color: #444;
 }
 
-h1 { 
+h1 {
 	font-size: 34px;
 	line-height: 40px;
 }
 
-h2 { 
+h2 {
 	font-size: 28px;
 	line-height: 32px;
  }
 
-h3 { 
+h3 {
 	font-size: 22px;
 	line-height: 30px;
 }
 
-h4 { 
+h4 {
 	font-size: 18px;
 	line-height: 22px;
 }
 
-h5 { 
+h5 {
 	font-size: 14px;
 	line-height: 18px;
 }
 
-h6 { 
+h6 {
 	font-size: 12px;
 }
 
@@ -252,7 +252,7 @@ small {
 	padding: 30px 15px;
 	z-index: 100;
 	position: relative;
-}	
+}
 
 /* ===[ Search Form ]=== */
 
@@ -292,8 +292,8 @@ small {
 	font-size: 11px;
 	font-weight: bold;
 	color: #ccc;
-	-webkit-border-radius: 2px; 
-	-moz-border-radius: 2px; 
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
 	border-radius: 2px;
 }
 
@@ -306,8 +306,8 @@ small {
 	font-size: 10px;
 	font-weight: bold;
 	text-transform: uppercase;
-	-webkit-border-radius: 2px; 
-	-moz-border-radius: 2px; 
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
 	border-radius: 2px;
 	display: none;
 }
@@ -323,13 +323,13 @@ small {
 	background: #202527;
 	color: #555;
 	padding-left: 28px;
-	-webkit-border-radius: 40px; 
-	-moz-border-radius: 40px; 
+	-webkit-border-radius: 40px;
+	-moz-border-radius: 40px;
 	border-radius: 40px;
-	-webkit-transition: .07s ease-in;  
-	-moz-transition: .07s ease-in;  
-	-o-transition: .07s ease-in;  
-	transition: .07s ease-in; 
+	-webkit-transition: .07s ease-in;
+	-moz-transition: .07s ease-in;
+	-o-transition: .07s ease-in;
+	transition: .07s ease-in;
 	border-top: solid 1px #212628;
 	border-bottom: solid 1px #373d3f;
 	z-index: 10;
@@ -340,10 +340,10 @@ small {
 	box-shadow: inset rgba(0,0,0, 0.25) 0px 0px 10px;
 	-moz-box-shadow: inset rgba(0,0,0, 0.25) 0px 0px 10px;
 	-webkit-box-shadow: inset rgba(0,0,0, 0.25) 0px 0px 10px;
-	-webkit-transition: .07s ease-in;  
-	-moz-transition: .07s ease-in;  
-	-o-transition: .07s ease-in;  
-	transition: .07s ease-in; 
+	-webkit-transition: .07s ease-in;
+	-moz-transition: .07s ease-in;
+	-o-transition: .07s ease-in;
+	transition: .07s ease-in;
 }
 
 .header .search-form fieldset:before {
@@ -418,18 +418,18 @@ footer .search-form .submit {
 
 .logo-text a {
 	color: #fff;
-	-webkit-transition: .1s ease-in;  
-	-moz-transition: .1s ease-in;  
-	-o-transition: .1s ease-in;  
-	transition: .1s ease-in; 
+	-webkit-transition: .1s ease-in;
+	-moz-transition: .1s ease-in;
+	-o-transition: .1s ease-in;
+	transition: .1s ease-in;
 }
 
 .logo-text a:hover {
 	color: #ddd;
-	-webkit-transition: .1s ease-in;  
-	-moz-transition: .1s ease-in;  
-	-o-transition: .1s ease-in;  
-	transition: .1s ease-in; 
+	-webkit-transition: .1s ease-in;
+	-moz-transition: .1s ease-in;
+	-o-transition: .1s ease-in;
+	transition: .1s ease-in;
 }
 
 /* ===[ Navigation Styles ]=== */
@@ -543,7 +543,7 @@ nav h2 i {
 
 .post {
 	position: relative;
-	background: #fff; 
+	background: #fff;
     margin: 0 0 30px 0;
     padding-bottom: 30px;
     border-bottom: solid 1px #eee;
@@ -596,7 +596,7 @@ nav h2 i {
 	width: 100%;
 }
 
-.post .box { 
+.post .box {
 	position: relative;
 	margin: 0 auto;
 	padding: 32px 14% 15px 14%;
@@ -638,7 +638,7 @@ nav h2 i {
 	font-size: 18px;
 	font-weight: 500;
  	padding: 10px 0;
- 	margin: 40px 14%; 	
+ 	margin: 40px 14%;
  	border-top: solid 5px #444;
  	border-bottom: solid 1px #e5e5e5;
  	color: #444;
@@ -695,11 +695,11 @@ nav h2 i {
 }
 
 .entry-title a {
-    color: #444; 
+    color: #444;
 }
 
 .entry-title a:hover {
-	color: #666 !important; 
+	color: #666 !important;
 }
 
 .intro {
@@ -713,7 +713,7 @@ nav h2 i {
 }
 
 blockquote {
-	padding: 0 0 0 30px;	
+	padding: 0 0 0 30px;
 	margin: 30px 0;
 	font-family: 'Helvetica Neue', Helvetica, sans-serif;
 	font-weight: 300;
@@ -828,7 +828,7 @@ blockquote {
     margin: 0 auto;
 }
 
-#content p { 
+#content p {
 	margin: 0 0 28px;
 }
 
@@ -903,7 +903,7 @@ blockquote {
 	font-size: 16px;
 	font-weight: 500;
  	padding: 10px 0;
- 	margin: 0 0 0 0; 	
+ 	margin: 0 0 0 0;
  	border-top: solid 5px #444;
  	border-bottom: solid 1px #e5e5e5;
  	color: #444;
@@ -951,7 +951,7 @@ blockquote {
 	font-size: 11px;
 	color: #bbb;
 	height: 75px;
-	letter-spacing: 3px; 
+	letter-spacing: 3px;
 }
 
 #infscr-loading img, #infscr-loading div {
@@ -981,14 +981,14 @@ blockquote {
 	font-size: 18px;
 	font-weight: 500;
  	padding: 10px 0;
- 	margin: 0 0 40px 0; 	
+ 	margin: 0 0 40px 0;
  	border-top: solid 5px #444;
  	border-bottom: solid 1px #e5e5e5;
  	color: #444;
  }
 
 .comments-open {
-	border-bottom: solid 1px #e7e7e7; 
+	border-bottom: solid 1px #e7e7e7;
 	margin-bottom: 60px !important;
 }
 
@@ -997,7 +997,7 @@ blockquote {
     padding: 0 0 60px 0;
 }
 
-.comment #respond { 
+.comment #respond {
 	margin-top: 0px;
 	padding-bottom: 10px;
 }
@@ -1007,7 +1007,7 @@ blockquote {
 	font-size: 18px;
 	font-weight: 500;
  	padding: 10px 0;
- 	margin: 0 0 0 0; 	
+ 	margin: 0 0 0 0;
  	border-top: solid 5px #444;
  	border-bottom: solid 1px #e5e5e5;
  	color: #444;
@@ -1039,8 +1039,8 @@ blockquote {
 	font-size: 10px;
 }
 
-#respond p { 
-	margin-bottom: 12px; 
+#respond p {
+	margin-bottom: 12px;
 }
 
 #respond input[type="text"], #respond textarea {
@@ -1051,8 +1051,8 @@ blockquote {
     background: #fff;
     width: 100%;
     padding: 9px 10px;
-    -webkit-border-radius: 3px; 
-	-moz-border-radius: 3px; 
+    -webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
 	border-radius: 3px;
 	-webkit-appearance:none;
 }
@@ -1091,10 +1091,10 @@ blockquote {
 	-o-box-shadow: 0px 2px 2px rgba(0,0,0,0.027), inset 0px 1px 0px rgba(255,255,255,0.69), inset 0px -1px 0px rgba(0,0,0,0.0187), inset 0px 16px 15px rgba(255,255,255,0.57);
 	box-shadow: 0px 2px 2px rgba(0,0,0,0.027), inset 0px 1px 0px rgba(255,255,255,0.69), inset 0px -1px 0px rgba(0,0,0,0.0187), inset 0px 16px 15px rgba(255,255,255,0.57);
 	-webkit-appearance: none;
-	-webkit-transition: .1s ease-in;  
-	-moz-transition: .1s ease-in;  
-	-o-transition: .1s ease-in;  
-	transition: .1s ease-in; 
+	-webkit-transition: .1s ease-in;
+	-moz-transition: .1s ease-in;
+	-o-transition: .1s ease-in;
+	transition: .1s ease-in;
 }
 
 #commentform #submit:hover {
@@ -1104,18 +1104,18 @@ blockquote {
 	-moz-box-shadow: 0px 2px 2px rgba(0,0,0,0.027), inset 0px 1px 0px rgba(255,255,255,0.69), inset 0px -1px 0px rgba(0,0,0,0.0187), inset 0px 16px 15px rgba(255,255,255,0.75);
 	-o-box-shadow: 0px 2px 2px rgba(0,0,0,0.027), inset 0px 1px 0px rgba(255,255,255,0.69), inset 0px -1px 0px rgba(0,0,0,0.0187), inset 0px 16px 15px rgba(255,255,255,0.75);
 	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.027), inset 0px 1px 0px rgba(255, 255, 255, 0.69), inset 0px -1px 0px rgba(0, 0, 0, 0.0187), inset 0px 16px 15px rgba(255, 255, 255, 0.75);
-	-webkit-transition: .1s ease-in;  
-	-moz-transition: .1s ease-in;  
-	-o-transition: .1s ease-in;  
-	transition: .1s ease-in; 
+	-webkit-transition: .1s ease-in;
+	-moz-transition: .1s ease-in;
+	-o-transition: .1s ease-in;
+	transition: .1s ease-in;
 }
 
 #commentform #submit:active {
-	border: 1px solid #d2d2d2; 
-	border-bottom: 1px solid #d8d8d8; 
+	border: 1px solid #d2d2d2;
+	border-bottom: 1px solid #d8d8d8;
 	border-radius: 3px; -webkit-box-shadow: 0px 1px 0px rgba(255,255,255,0.58), inset 0px 1px 6px rgba(0,0,0,0.07), inset 0px -16px 15px rgba(255,255,255,0.20); -moz-
-	box-shadow: 0px 1px 0px rgba(255,255,255,0.58), inset 0px 1px 6px rgba(0,0,0,0.07), inset 0px -16px 15px rgba(255,255,255,0.20); -o-box-shadow: 0px 1px 0px rgba(255,255,255,0.58), inset 0px 1px 6px rgba(0,0,0,0.07), inset 0px -16px 15px rgba(255,255,255,0.20); 
-	box-shadow: 0px 1px 0px rgba(255,255,255,0.58), inset 0px 1px 6px rgba(0,0,0,0.07), inset 0px -16px 15px rgba(255,255,255,0.20); 
+	box-shadow: 0px 1px 0px rgba(255,255,255,0.58), inset 0px 1px 6px rgba(0,0,0,0.07), inset 0px -16px 15px rgba(255,255,255,0.20); -o-box-shadow: 0px 1px 0px rgba(255,255,255,0.58), inset 0px 1px 6px rgba(0,0,0,0.07), inset 0px -16px 15px rgba(255,255,255,0.20);
+	box-shadow: 0px 1px 0px rgba(255,255,255,0.58), inset 0px 1px 6px rgba(0,0,0,0.07), inset 0px -16px 15px rgba(255,255,255,0.20);
 }
 
 .form-allowed-tags {
@@ -1169,7 +1169,7 @@ blockquote {
 	display: inline-block;
 }
 
-.commentlist .children li { 
+.commentlist .children li {
 	padding-left: 40px;
 	border-left: solid 1px #e5e5e5;
 }
@@ -1208,18 +1208,18 @@ blockquote {
     font-weight: bold;
     text-transform: uppercase;
     display: inline-block;
-    -webkit-transition: .07s ease-in;  
-	-moz-transition: .07s ease-in;  
-	-o-transition: .07s ease-in;  
-	transition: .07s ease-in; 
+    -webkit-transition: .07s ease-in;
+	-moz-transition: .07s ease-in;
+	-o-transition: .07s ease-in;
+	transition: .07s ease-in;
 }
 
 #cancel-comment-reply-link:hover {
 	color: #555;
-	-webkit-transition: .07s ease-in;  
-	-moz-transition: .07s ease-in;  
-	-o-transition: .07s ease-in;  
-	transition: .07s ease-in; 
+	-webkit-transition: .07s ease-in;
+	-moz-transition: .07s ease-in;
+	-o-transition: .07s ease-in;
+	transition: .07s ease-in;
 }
 
 #cancel-comment-reply-link i {
@@ -1270,8 +1270,8 @@ blockquote {
     float: left;
 	height: 32px;
 	width: 32px;
-	-webkit-border-radius: 2px; 
-	-moz-border-radius: 2px; 
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
 	border-radius: 2px;
 }
 
@@ -1284,7 +1284,7 @@ blockquote {
     margin-top: 0;
 }
 
-.fn a { 
+.fn a {
 	color: #444;
 }
 
@@ -1345,7 +1345,7 @@ blockquote {
 
 .alignright { float: right }
 
-.aligncenter { 
+.aligncenter {
 	text-align: center;
 	display: block;
 	margin-left: auto;
@@ -1353,8 +1353,8 @@ blockquote {
 }
 
 .wp-caption img, .size-thumbnail {
-	-webkit-border-radius: 2px; 
-	-moz-border-radius: 2px; 
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
 	border-radius: 2px;
 }
 
@@ -1541,8 +1541,8 @@ input[type="text"], input[type="email"], textarea {
     background: #fff;
     width: 100%;
     padding: 10px;
-    -webkit-border-radius: 3px; 
-	-moz-border-radius: 3px; 
+    -webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
 	border-radius: 3px;
 }
 
@@ -1566,10 +1566,10 @@ input[type="text"], input[type="email"], textarea {
 	-o-box-shadow: 0px 2px 2px rgba(0,0,0,0.027), inset 0px 1px 0px rgba(255,255,255,0.69), inset 0px -1px 0px rgba(0,0,0,0.0187), inset 0px 16px 15px rgba(255,255,255,0.57);
 	box-shadow: 0px 2px 2px rgba(0,0,0,0.027), inset 0px 1px 0px rgba(255,255,255,0.69), inset 0px -1px 0px rgba(0,0,0,0.0187), inset 0px 16px 15px rgba(255,255,255,0.57);
 	-webkit-appearance: none;
-	-webkit-transition: .1s ease-in;  
-	-moz-transition: .1s ease-in;  
-	-o-transition: .1s ease-in;  
-	transition: .1s ease-in; 
+	-webkit-transition: .1s ease-in;
+	-moz-transition: .1s ease-in;
+	-o-transition: .1s ease-in;
+	transition: .1s ease-in;
 }
 
 .wpcf7-submit:hover {
@@ -1579,18 +1579,18 @@ input[type="text"], input[type="email"], textarea {
 	-moz-box-shadow: 0px 2px 2px rgba(0,0,0,0.027), inset 0px 1px 0px rgba(255,255,255,0.69), inset 0px -1px 0px rgba(0,0,0,0.0187), inset 0px 16px 15px rgba(255,255,255,0.75);
 	-o-box-shadow: 0px 2px 2px rgba(0,0,0,0.027), inset 0px 1px 0px rgba(255,255,255,0.69), inset 0px -1px 0px rgba(0,0,0,0.0187), inset 0px 16px 15px rgba(255,255,255,0.75);
 	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.027), inset 0px 1px 0px rgba(255, 255, 255, 0.69), inset 0px -1px 0px rgba(0, 0, 0, 0.0187), inset 0px 16px 15px rgba(255, 255, 255, 0.75);
-	-webkit-transition: .1s ease-in;  
-	-moz-transition: .1s ease-in;  
-	-o-transition: .1s ease-in;  
-	transition: .1s ease-in; 
+	-webkit-transition: .1s ease-in;
+	-moz-transition: .1s ease-in;
+	-o-transition: .1s ease-in;
+	transition: .1s ease-in;
 }
 
 .wpcf7-submit:active {
-	border: 1px solid #d2d2d2; 
-	border-bottom: 1px solid #d8d8d8; 
+	border: 1px solid #d2d2d2;
+	border-bottom: 1px solid #d8d8d8;
 	border-radius: 3px; -webkit-box-shadow: 0px 1px 0px rgba(255,255,255,0.58), inset 0px 1px 6px rgba(0,0,0,0.07), inset 0px -16px 15px rgba(255,255,255,0.20); -moz-
-	box-shadow: 0px 1px 0px rgba(255,255,255,0.58), inset 0px 1px 6px rgba(0,0,0,0.07), inset 0px -16px 15px rgba(255,255,255,0.20); -o-box-shadow: 0px 1px 0px rgba(255,255,255,0.58), inset 0px 1px 6px rgba(0,0,0,0.07), inset 0px -16px 15px rgba(255,255,255,0.20); 
-	box-shadow: 0px 1px 0px rgba(255,255,255,0.58), inset 0px 1px 6px rgba(0,0,0,0.07), inset 0px -16px 15px rgba(255,255,255,0.20); 
+	box-shadow: 0px 1px 0px rgba(255,255,255,0.58), inset 0px 1px 6px rgba(0,0,0,0.07), inset 0px -16px 15px rgba(255,255,255,0.20); -o-box-shadow: 0px 1px 0px rgba(255,255,255,0.58), inset 0px 1px 6px rgba(0,0,0,0.07), inset 0px -16px 15px rgba(255,255,255,0.20);
+	box-shadow: 0px 1px 0px rgba(255,255,255,0.58), inset 0px 1px 6px rgba(0,0,0,0.07), inset 0px -16px 15px rgba(255,255,255,0.20);
 }
 
 .wpcf7-response-output {
@@ -1627,7 +1627,7 @@ input[type="text"], input[type="email"], textarea {
 }
 
 .chirp li {
-	border-bottom: solid 1px #e4e4e4 !important; 
+	border-bottom: solid 1px #e4e4e4 !important;
 	margin-bottom: 15px !important;
 	padding-bottom: 15px !important;
 }
@@ -1672,8 +1672,8 @@ input[type="text"], input[type="email"], textarea {
 	background: #ccc;
 	padding: 0 8px;
 	margin: 0 3px 3px 0;
-	-webkit-border-radius: 2px; 
-	-moz-border-radius: 2px; 
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
 	border-radius: 2px;
 	color: #fff !important;
 	display: inline-block;
@@ -1681,7 +1681,7 @@ input[type="text"], input[type="email"], textarea {
 }
 
 .tagcloud a:hover {
-	background: #555 !important; 
+	background: #555 !important;
 }
 
 /* ===[ Custom Archive Page ]=== */
@@ -1703,7 +1703,7 @@ input[type="text"], input[type="email"], textarea {
 .error404 #archive {
 	border-top: none;
 	margin-top: 25px;
-}	
+}
 
 .archive-col {
 	display: inline-block;
