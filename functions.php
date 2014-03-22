@@ -68,30 +68,30 @@ add_action( 'after_setup_theme', 'medium_setup' );
 /* Enqueue Scripts and Styles */
 function medium_scripts_styles() {
 
+	// Get theme version
+	$version = wp_get_theme()->Version;
+
 	//Enqueue Styles
 
 	//Main Stylesheet
-	wp_enqueue_style( 'style', get_stylesheet_uri() );
+	wp_enqueue_style( 'medium-style', get_stylesheet_uri() );
 
 	//Font Awesome CSS
-	wp_enqueue_style( 'font-awesome-css', get_template_directory_uri() . "/includes/fonts/fontawesome/font-awesome.css", array(), '0.1', 'screen' );
+	wp_enqueue_style( 'font-awesome-css', get_template_directory_uri() . "/includes/fonts/fontawesome/font-awesome.min.css", array(), '4.0.3', 'screen' );
 
 	//NanoScroller
 	wp_enqueue_style( 'nanoscroller-css', get_template_directory_uri() . "/includes/js/nanoscroller/nanoscroller.css", array(), '0.1', 'screen' );
 
 	//Media Queries CSS
-	wp_enqueue_style( 'media-queries-css', get_template_directory_uri() . "/media-queries.css", array(), '0.1', 'screen' );
+	wp_enqueue_style( 'media-queries-css', get_template_directory_uri() . "/media-queries.css", array( 'medium-style' ), $version, 'screen' );
 
 	//Flexslider
-	wp_enqueue_style( 'flexslider-css', get_template_directory_uri() . "/includes/styles/flexslider.css", array(), '0.1', 'screen' );
+	wp_enqueue_style( 'flexslider-css', get_template_directory_uri() . "/includes/styles/flexslider.css", array(), '2.1', 'screen' );
 
 	//Enqueue Scripts
 
-	//Register jQuery
-	wp_enqueue_script( 'jquery' );
-
 	//Custom JS
-	wp_enqueue_script( 'custom-js', get_template_directory_uri() . '/includes/js/custom/custom.js', array(), '20130731', true );
+	wp_enqueue_script( 'custom-js', get_template_directory_uri() . '/includes/js/custom/custom.js', array( 'jquery' ), '20130731', true );
 	wp_localize_script( 'custom-js', 'custom_js_vars', array(
 			'infinite_scroll' 		=> get_option( 'medium_customizer_infinite' ),
 			'infinite_scroll_image' => get_template_directory_uri()
@@ -99,20 +99,25 @@ function medium_scripts_styles() {
 	);
 
 	//FidVid
-	wp_enqueue_script('fitvid-js', get_template_directory_uri() . '/includes/js/fitvid/jquery.fitvids.js', array(), '20130731', true );
+	wp_enqueue_script('fitvid-js', get_template_directory_uri() . '/includes/js/fitvid/jquery.fitvids.js', array( 'jquery' ), '1.0.3', true );
 
 	//Flexslider
-	wp_enqueue_script('flexslider-js', get_template_directory_uri() . '/includes/js/flexslider/jquery.flexslider-min.js', array(), '20130731', true );
+	wp_enqueue_script('flexslider-js', get_template_directory_uri() . '/includes/js/flexslider/jquery.flexslider-min.js', array(), '2.1', true );
 
 	//Enquire
-	wp_enqueue_script('enquire-js', get_template_directory_uri() . '/includes/js/enquire/enquire.min.js', array(), '20130731', true );
+	wp_enqueue_script('enquire-js', get_template_directory_uri() . '/includes/js/enquire/enquire.min.js', array(), '1.5.3', true );
 
 	//NanoScroller
-	wp_enqueue_script('nanoscroller-js', get_template_directory_uri() . '/includes/js/nanoscroller/jquery.nanoscroller.min.js', array(), '20130731', true );
+	wp_enqueue_script('nanoscroller-js', get_template_directory_uri() . '/includes/js/nanoscroller/jquery.nanoscroller.min.js', array( 'jquery' ), $version, true );
 
 	//Infinite Scroll
 	if ( get_option( 'medium_customizer_infinite' ) == 'disabled' ) { } else {
-		wp_enqueue_script( 'infinite-js', get_template_directory_uri() . '/includes/js/infinitescroll/jquery.infinitescroll.min.js', array(), '20130731', true );
+		wp_enqueue_script( 'infinite-js', get_template_directory_uri() . '/includes/js/infinitescroll/jquery.infinitescroll.min.js', array( 'jquery' ), '2.0', true );
+	}
+
+	// Comment reply script
+	if ( is_singular() && get_option( 'thread_comments' ) ) {
+		wp_enqueue_script( 'comment-reply' );
 	}
 
 }
@@ -122,19 +127,21 @@ add_action( 'wp_enqueue_scripts', 'medium_scripts_styles' );
 /* Register Widget Areas */
 if ( function_exists( 'register_sidebars' ) )
 register_sidebar( array(
-	'name' => __( 'Left Sidebar', 'medium' ),
-	'description' => __( 'Widgets in this area will be shown in the sidebar.', 'medium' ),
+	'name'          => __( 'Left Sidebar', 'medium' ),
+	'id'            => 'left-sidebar',
+	'description'   => __( 'Widgets in this area will be shown in the sidebar.', 'medium' ),
 	'before_widget' => '<div id="%1$s" class="widget %2$s">',
-	'after_widget' => '</div>',
-	'before_title' => '<h2 class="widgettitle accordion-toggle">',
-	'after_title' => '</h2>'
+	'after_widget'  => '</div>',
+	'before_title'  => '<h2 class="widgettitle accordion-toggle">',
+	'after_title'   => '</h2>'
 ) );
 
 register_sidebar( array(
-	'name' => __( 'Right Sidebar', 'medium' ),
-	'description' => __( 'Widgets in this area will be shown in the right sidebar.', 'medium' ),
+	'name'          => __( 'Right Sidebar', 'medium' ),
+	'id'            => 'right-sidebar',
+	'description'   => __( 'Widgets in this area will be shown in the right sidebar.', 'medium' ),
 	'before_widget' => '<div id="%1$s" class="widget %2$s">',
-	'after_widget' => '</div>'
+	'after_widget'  => '</div>'
 ) );
 
 
@@ -226,7 +233,7 @@ function medium_comment( $comment, $args, $depth ) {
 function medium_cancel_comment_reply_button( $html, $link, $text ) {
     $style = isset($_GET['replytocom']) ? '' : ' style="display:none;"';
     $button = '<div id="cancel-comment-reply-link"' . $style . '>';
-    return $button . '<i class="icon-remove-sign"></i> </div>';
+    return $button . '<i class="fa fa-times"></i> </div>';
 }
 
 add_action( 'cancel_comment_reply_link', 'medium_cancel_comment_reply_button', 10, 3 );
@@ -266,3 +273,36 @@ if ( !function_exists( 'okaysocial_init' ) ) {
 	add_action( 'admin_init', 'okay_toolkit_nag_ignore' );
 
 }
+
+
+/**
+ * Filters wp_title to print a neat <title> tag based on what is being viewed.
+ *
+ * @param string $title Default title text for current view.
+ * @param string $sep Optional separator.
+ * @return string The filtered title.
+ */
+function medium_wp_title( $title, $sep ) {
+	if ( is_feed() ) {
+		return $title;
+	}
+
+	global $page, $paged;
+
+	// Add the blog name
+	$title .= get_bloginfo( 'name', 'display' );
+
+	// Add the blog description for the home/front page.
+	$site_description = get_bloginfo( 'description', 'display' );
+	if ( $site_description && ( is_home() || is_front_page() ) ) {
+		$title .= " $sep $site_description";
+	}
+
+	// Add a page number if necessary:
+	if ( $paged >= 2 || $page >= 2 ) {
+		$title .= " $sep " . sprintf( __( 'Page %s', 'medium' ), max( $paged, $page ) );
+	}
+
+	return $title;
+}
+add_filter( 'wp_title', 'medium_wp_title', 10, 2 );

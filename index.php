@@ -53,8 +53,8 @@
 			<?php if( medium_page_has_nav() ) : ?>
 				<div class="post-nav <?php if ( get_option('medium_customizer_infinite') == 'enabled' ) { echo 'infinite'; } ?>">
 					<div class="post-nav-inside">
-						<div class="post-nav-left"><?php previous_posts_link(__('<i class="icon-arrow-left"></i> Newer Posts', 'medium')) ?></div>
-						<div class="post-nav-right"><?php next_posts_link(__('Older Posts <i class="icon-arrow-right"></i>', 'medium')) ?></div>
+						<div class="post-nav-left"><?php previous_posts_link(__('<i class="fa fa-arrow-left"></i> Newer Posts', 'medium')) ?></div>
+						<div class="post-nav-right"><?php next_posts_link(__('Older Posts <i class="fa fa-arrow-right"></i>', 'medium')) ?></div>
 					</div>
 				</div>
 			<?php endif; ?>
