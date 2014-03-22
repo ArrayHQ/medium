@@ -62,7 +62,7 @@
 					<?php } ?>
 
 					<nav role="navigation" class="header-nav open-widget">
-						<?php wp_nav_menu( array( 'theme_location' => 'main', 'menu_class' => 'nav' ) ); ?>
+						<?php wp_nav_menu( array( 'theme_location' => 'main', 'menu_class' => 'nav', 'container' => false ) ); ?>
 					</nav>
 
 					<div class="widgets">

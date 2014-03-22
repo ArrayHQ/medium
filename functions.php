@@ -48,6 +48,9 @@ function medium_setup() {
 	// Custom Background Support
 	add_theme_support( 'custom-background' );
 
+	// Add gallery support
+	add_theme_support( 'array_themes_gallery_support' );
+
 	// Register Menu
 	register_nav_menus( array(
 		'main'   => __( 'Main Menu', 'medium' ),
@@ -124,57 +127,83 @@ function medium_scripts_styles() {
 add_action( 'wp_enqueue_scripts', 'medium_scripts_styles' );
 
 
-/* Register Widget Areas */
-if ( function_exists( 'register_sidebars' ) )
-register_sidebar( array(
-	'name'          => __( 'Left Sidebar', 'medium' ),
-	'id'            => 'left-sidebar',
-	'description'   => __( 'Widgets in this area will be shown in the sidebar.', 'medium' ),
-	'before_widget' => '<div id="%1$s" class="widget %2$s">',
-	'after_widget'  => '</div>',
-	'before_title'  => '<h2 class="widgettitle accordion-toggle">',
-	'after_title'   => '</h2>'
-) );
+/**
+ * Registers Widget Areas
+ *
+ */
+function medium_register_sidebars() {
 
-register_sidebar( array(
-	'name'          => __( 'Right Sidebar', 'medium' ),
-	'id'            => 'right-sidebar',
-	'description'   => __( 'Widgets in this area will be shown in the right sidebar.', 'medium' ),
-	'before_widget' => '<div id="%1$s" class="widget %2$s">',
-	'after_widget'  => '</div>'
-) );
+	register_sidebar( array(
+		'name'          => __( 'Left Sidebar', 'medium' ),
+		'id'            => 'left-sidebar',
+		'description'   => __( 'Widgets in this area will be shown in the sidebar.', 'medium' ),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2 class="widgettitle accordion-toggle">',
+		'after_title'   => '</h2>'
+	) );
+
+	register_sidebar( array(
+		'name'          => __( 'Right Sidebar', 'medium' ),
+		'id'            => 'right-sidebar',
+		'description'   => __( 'Widgets in this area will be shown in the right sidebar.', 'medium' ),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>'
+	) );
+}
+add_action( 'widgets_init', 'medium_register_sidebars' );
 
 
-/* Pagination Conditional */
+/**
+ * Deprecated page navigation
+ *
+ * @deprecated 2.0 Replaced by medium_page_nav()
+ */
 function medium_page_has_nav() {
-	global $wp_query;
-	return ( $wp_query->max_num_pages > 1 );
+
+	_deprecated_function( __FUNCTION__, '2.0', 'medium_page_nav()' );
+	return false;
 }
 
 
-/* Custom Gallery Support */
-function medium_gallery_support() {
-	add_theme_support( 'okay_themes_gallery_support' );
+
+/**
+ * Displays post pagination links
+ *
+ * @since 2.0
+ */
+function medium_page_nav() {
+
+	// Return early if there's only one page.
+	if ( $GLOBALS['wp_query']->max_num_pages < 2 ) {
+		return;
+	} ?>
+	<div class="post-nav <?php if ( get_option('medium_customizer_infinite') == 'enabled' ) { echo 'infinite'; } ?>">
+		<div class="post-nav-inside">
+			<div class="post-nav-left"><?php previous_posts_link(__('<i class="fa fa-arrow-left"></i> Newer Posts', 'medium')) ?></div>
+			<div class="post-nav-right"><?php next_posts_link(__('Older Posts <i class="fa fa-arrow-right"></i>', 'medium')) ?></div>
+		</div>
+	</div>
+	<?php
 }
-add_action( 'after_setup_theme', 'medium_gallery_support' );
 
 
-/* Excerpt Read More Link */
+
+/**
+ * Customizes the excerpt Read More link
+ */
 function medium_new_excerpt_more( $more ) {
+
 	global $post;
 	return ' <a class="more-link" href="'. get_permalink( $post->ID ) . '">Read More</a>';
 }
 add_filter( 'excerpt_more', 'medium_new_excerpt_more' );
 
 
-/* Remove Custom Menu Container */
-function medium_nav_menu_args( $args = '' ) {
-	$args['container'] = false;
-	return $args;
-}
-add_filter( 'wp_nav_menu_args', 'medium_nav_menu_args' );
 
-/* Add Customizer CSS To Header */
+/**
+ * Adds Customizer CSS To Header
+ */
 function medium_customizer_css() {
     ?>
 	<style type="text/css">
@@ -197,7 +226,9 @@ function medium_customizer_css() {
 add_action( 'wp_head', 'medium_customizer_css' );
 
 
-/* Custom Comment Output */
+/**
+ * Custom Comment Output
+ */
 function medium_comment( $comment, $args, $depth ) {
 	$GLOBALS['comment'] = $comment; ?>
 	<li <?php comment_class('clearfix'); ?> id="li-comment-<?php comment_ID() ?>">
@@ -235,44 +266,8 @@ function medium_cancel_comment_reply_button( $html, $link, $text ) {
     $button = '<div id="cancel-comment-reply-link"' . $style . '>';
     return $button . '<i class="fa fa-times"></i> </div>';
 }
-
 add_action( 'cancel_comment_reply_link', 'medium_cancel_comment_reply_button', 10, 3 );
 
-
-/* Check for Okay Toolkit Notice */
-if ( !function_exists( 'okaysocial_init' ) ) {
-
-	function okay_toolkit_notice() {
-	    global $current_user ;
-	    $user_id = $current_user->ID;
-
-	    $adminurl = admin_url('plugin-install.php?tab=plugin-information&plugin=okay-toolkit&TB_iframe=true&width=640&height=589');
-
-	    if ( ! get_user_meta( $user_id, 'okay_toolkit_ignore_notice' ) ) {
-	        echo '<div class="updated"><p>';
-
-	        echo 'This theme supports the Okay Toolkit! Install it to extend the features of your theme. ';
-
-	        echo '<a class="thickbox onclick" href=" ' . $adminurl . ' ">Install Now</a> | ';
-
-	        printf(__('<a href="%1$s">Hide Notice</a>'), '?okay_toolkit_nag_ignore=0');
-
-	        echo "</p></div>";
-	    }
-	}
-	add_action( 'admin_notices', 'okay_toolkit_notice' );
-
-	function okay_toolkit_nag_ignore() {
-	    global $current_user;
-	        $user_id = $current_user->ID;
-	        /* If user clicks to ignore the notice, add that to their user meta */
-	        if ( isset($_GET['okay_toolkit_nag_ignore']) && '0' == $_GET['okay_toolkit_nag_ignore'] ) {
-	             add_user_meta( $user_id, 'okay_toolkit_ignore_notice', 'true', true );
-	    }
-	}
-	add_action( 'admin_init', 'okay_toolkit_nag_ignore' );
-
-}
 
 
 /**
