@@ -8,7 +8,7 @@
 					<h2 class="archive-title">
 						<?php
 							global $wp_query;
-							printf( __( '%d results for "%s"', 'okay' ), $wp_query->found_posts, get_search_query( true ) );
+							printf( __( '%d results for "%s"', 'medium' ), $wp_query->found_posts, get_search_query( true ) );
 						?>
 					</h2>
 				<?php } else if(is_tag()) { ?>
