@@ -1,6 +1,6 @@
 <?php
 /**
- * Ampersand functions
+ * Medium functions
  *
  * @package Medium
  * @since Medium 1.0

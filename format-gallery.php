@@ -13,7 +13,11 @@
 							<div class="post-content">
 								<div class="title-meta">
 									<div class="title-meta-left">
-										<?php _e('Posted on','medium'); ?> <?php echo get_the_date(); ?> <?php _e('by','medium'); ?> <?php the_author_posts_link(); ?>
+										<?php printf( __( 'Posted on %1$s by <a href="%2$s">%3$s', 'medium' ),
+										 	get_the_date(),
+										 	esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
+										 	get_the_author() );
+										?>
 									</div>
 
 									<div class="title-meta-right">
@@ -48,10 +52,10 @@
 
 							<?php if( is_page() ) {} else { ?>
 								<ul class="meta">
-									<li><span><?php _e('Category: ','medium'); ?></span> <?php the_category(', '); ?></li>
+									<li><span><?php _e( 'Category: ', 'medium' ); ?></span> <?php the_category( ', ' ); ?></li>
 
 									<?php $posttags = get_the_tags(); if ( $posttags ) { ?>
-										<li><span><?php _e('Tag: ','medium'); ?></span> <?php the_tags('', ', ', ''); ?></li>
+										<li><span><?php _e( 'Tag: ', 'medium' ); ?></span> <?php the_tags( '', ', ', '' ); ?></li>
 									<?php } ?>
 
 									<?php if( is_single() ) { ?>

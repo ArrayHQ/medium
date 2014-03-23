@@ -9,16 +9,14 @@ get_header(); ?>
 
 		<div id="content">
 			<div class="posts">
-
-				<!-- grab the posts -->
 				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-				<article <?php post_class('post'); ?>>
+				<article <?php post_class( 'post' ); ?>>
 
 					<!-- grab the video -->
-					<?php if ( get_post_meta($post->ID, 'video', true) ) { ?>
+					<?php if( get_post_meta( $post->ID, 'video', true ) ) { ?>
 						<div class="fitvid">
-							<?php echo get_post_meta($post->ID, 'video', true) ?>
+							<?php echo get_post_meta( $post->ID, 'video', true ); ?>
 						</div>
 					<?php } ?>
 
@@ -33,11 +31,14 @@ get_header(); ?>
 							<div class="post-content">
 								<div class="title-meta">
 									<div class="title-meta-left">
-										<?php if ( get_post_meta($post->ID, 'pagetitle', true) ) { ?>
-											<?php echo get_post_meta($post->ID, 'pagetitle', true) ?>
-										<?php } else { ?>
-											<?php _e('Last modified','medium'); ?> <?php the_modified_date(); ?> <?php _e('by','medium'); ?> <?php the_author_posts_link(); ?>
-										<?php } ?>
+										<?php if( get_post_meta( $post->ID, 'pagetitle', true ) ) {
+											echo get_post_meta( $post->ID, 'pagetitle', true );
+										} else {
+											printf( __( 'Last modified %1$s by <a href="%2$s">%3$s', 'medium' ),
+										 	get_the_date(),
+										 	esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
+										 	get_the_author() );
+										} ?>
 									</div>
 								</div>
 
