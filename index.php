@@ -3,41 +3,32 @@
 		<div id="content">
 			<div class="posts">
 
-				<!-- titles -->
-				<?php if(is_search()) { ?>
-					<h2 class="archive-title">
-						<?php
-							global $wp_query;
-							printf( __( '%d results for "%s"', 'medium' ), $wp_query->found_posts, get_search_query( true ) );
-						?>
-					</h2>
+				<h2 class="archive-title">
+				<?php if( is_search() ) {
+					global $wp_query;
+					printf( __( '%d results for "%s"', 'medium' ), $wp_query->found_posts, get_search_query( true ) );
 
-				<?php } else if( is_tag() ) { ?>
-					<h2 class="archive-title"><?php single_tag_title(); ?></h2>
+				} else if( is_tag() ) {
+					single_tag_title();
 
-				<?php } else if( is_day() ) { ?>
-					<h2 class="archive-title"><?php _e( 'Archive:', 'medium' ); ?> <?php echo get_the_date(); ?></h2>
+				} else if( is_day() ) {
+					_e( 'Archive:', 'medium' ); echo get_the_date();
 
-				<?php } else if( is_month() ) { ?>
-					<h2 class="archive-title"><?php echo get_the_date( 'F Y' ); ?></h2>
+				} else if( is_month() ) {
+					echo get_the_date( 'F Y' );
 
-				<?php } else if( is_year() ) { ?>
-					<h2 class="archive-title"><?php echo get_the_date( 'Y' ); ?></h2>
+				} else if( is_year() ) {
+					echo get_the_date( 'Y' );
 
-				<?php } else if( is_category() ) { ?>
-					<h2 class="archive-title"><?php single_cat_title(); ?></h2>
+				} else if( is_category() ) {
+					single_cat_title();
 
-				<?php } else if( is_author() ) { ?>
-					<h2 class="archive-title">
-						<?php
-							the_post();
-							printf( __( 'Author: %s', 'medium' ), '' . get_the_author() . '' );
-							rewind_posts();
-						?>
-					</h2>
-				<?php } ?>
+				} else if( is_author() ) {
+					printf( __( 'Author: %s', 'medium' ), '' . get_the_author() . '' );
 
-				<!-- grab the posts -->
+				} ?>
+				</h2>
+
 				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
 				<article <?php post_class('post'); ?>>

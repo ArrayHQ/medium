@@ -17,15 +17,15 @@
 									</div>
 
 									<div class="title-meta-right">
-										<a href="<?php the_permalink(); ?>#comments-title" title="comments"><?php comments_number(__('No Comments','medium'),__('1 Comment','medium'),__( '% Comments','medium') );?></a>
+										<?php comments_popup_link( __( 'No Comments', 'medium' ), __( '1 Comment', 'medium' ), __( '% Comments', 'medium' ) ); ?>
 									</div>
 								</div>
 
 								<header>
 									<?php if( is_single() || is_page() ) { ?>
-										<h1 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h1>
+										<h1 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
 									<?php } else { ?>
-										<h2 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h2>
+										<h2 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
 									<?php } ?>
 								</header>
 
