@@ -33,7 +33,6 @@ function medium_setup() {
 
 		/* Add custom post styles */
 		require( get_template_directory() . '/includes/editor/add-styles.php' );
-		add_editor_style();
 	}
 
 	// Add posts and comments RSS feed links to head
