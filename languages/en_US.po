@@ -3,8 +3,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Medium 2.0\n"
-"Report-Msgid-Bugs-To: http://wordpress.org/tags/array\n"
-"POT-Creation-Date: 2014-03-23 02:54:08+00:00\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tags/medium\n"
+"POT-Creation-Date: 2014-03-26 03:07:49+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -253,50 +253,50 @@ msgstr ""
 msgid "Help File &rarr;"
 msgstr ""
 
-#: includes/admin/getting-started/getting-started.php:126
+#: includes/admin/getting-started/getting-started.php:127
 msgid "Install the Array Toolkit"
 msgstr ""
 
-#: includes/admin/getting-started/getting-started.php:127
+#: includes/admin/getting-started/getting-started.php:128
 msgid "The Array Toolkit is a plugin that adds various features to your theme."
 msgstr ""
 
-#: includes/admin/getting-started/getting-started.php:127
+#: includes/admin/getting-started/getting-started.php:128
 msgid "requires the Array Toolkit to enable the following features:"
 msgstr ""
 
-#: includes/admin/getting-started/getting-started.php:131
+#: includes/admin/getting-started/getting-started.php:132
 msgid "Portfolio Items"
 msgstr ""
 
-#: includes/admin/getting-started/getting-started.php:135
+#: includes/admin/getting-started/getting-started.php:136
 msgid "Custom Galleries"
 msgstr ""
 
-#: includes/admin/getting-started/getting-started.php:140
+#: includes/admin/getting-started/getting-started.php:141
 msgid "Slider Items"
 msgstr ""
 
-#: includes/admin/getting-started/getting-started.php:144
+#: includes/admin/getting-started/getting-started.php:145
 msgid "Install Array Toolkit Plugin"
 msgstr ""
 
-#: includes/admin/getting-started/getting-started.php:152
-#: includes/admin/getting-started/getting-started.php:155
+#: includes/admin/getting-started/getting-started.php:154
+#: includes/admin/getting-started/getting-started.php:157
 msgid "Visit the Knowledge Base"
 msgstr ""
 
-#: includes/admin/getting-started/getting-started.php:153
+#: includes/admin/getting-started/getting-started.php:155
 msgid ""
 "New to the WordPress world? Our Knowledge Base has over 20 video tutorials, "
 "from installing WordPress to working with themes and more."
 msgstr ""
 
-#: includes/admin/getting-started/getting-started.php:163
+#: includes/admin/getting-started/getting-started.php:165
 msgid "Activate your license for seamless updates!"
 msgstr ""
 
-#: includes/admin/getting-started/getting-started.php:167
+#: includes/admin/getting-started/getting-started.php:169
 msgid ""
 "Add your license key to get theme updates without leaving your dashboard! "
 "Find your license key in your Array Dashboard in the <a class=\"thickbox\" "
@@ -304,59 +304,59 @@ msgid ""
 "button."
 msgstr ""
 
-#: includes/admin/getting-started/getting-started.php:175
+#: includes/admin/getting-started/getting-started.php:177
 msgid "Enter your license key:"
 msgstr ""
 
-#: includes/admin/getting-started/getting-started.php:179
+#: includes/admin/getting-started/getting-started.php:181
 msgid "Save License Key"
 msgstr ""
 
-#: includes/admin/getting-started/getting-started.php:184
+#: includes/admin/getting-started/getting-started.php:186
 msgid "Your license is active!"
 msgstr ""
 
-#: includes/admin/getting-started/getting-started.php:186
+#: includes/admin/getting-started/getting-started.php:188
 msgid "Deactivate License"
 msgstr ""
 
-#: includes/admin/getting-started/getting-started.php:189
+#: includes/admin/getting-started/getting-started.php:191
 msgid "License saved! Click to activate &rarr;"
 msgstr ""
 
-#: includes/admin/getting-started/getting-started.php:190
+#: includes/admin/getting-started/getting-started.php:192
 msgid "Activate License"
 msgstr ""
 
-#: includes/admin/getting-started/getting-started.php:199
+#: includes/admin/getting-started/getting-started.php:201
 msgid "Updating Your Theme"
 msgstr ""
 
-#: includes/admin/getting-started/getting-started.php:204
+#: includes/admin/getting-started/getting-started.php:206
 msgid ""
 "Once your license key is activated, you can download and install theme "
 "updates by going to Appearance &rarr; Themes. A <a class=\"thickbox\" href="
 "\"%s\">notice</a> will be displayed when an update is available."
 msgstr ""
 
-#: includes/admin/getting-started/getting-started.php:208
+#: includes/admin/getting-started/getting-started.php:210
 msgid ""
 "The update process will grab the latest theme files from Array and replace "
 "your current theme. Any changes you&apos;ve made to the theme files will be "
 "overwritten, so be sure to back up your theme before updating!"
 msgstr ""
 
-#: includes/admin/getting-started/getting-started.php:216
+#: includes/admin/getting-started/getting-started.php:218
 msgid "Latest Theme Updates"
 msgstr ""
 
-#: includes/admin/getting-started/getting-started.php:247
+#: includes/admin/getting-started/getting-started.php:249
 msgid ""
 " %1$s activated! Visit the <a href=\"%2$s\">Getting Started</a> page to view "
 "the help file, install the Array Toolkit or ask us a question. "
 msgstr ""
 
-#: includes/admin/getting-started/getting-started.php:249
+#: includes/admin/getting-started/getting-started.php:251
 msgid "<a href=\"%1$s\">Hide this notice</a>"
 msgstr ""
 
