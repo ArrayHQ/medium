@@ -115,14 +115,15 @@ function medium_getting_started_page() {
 
 				<div class="panel-right">
 					<!-- Check to see if theme requires the Array Toolkit -->
-					<?php
-						if( current_theme_supports( 'array_themes_portfolio_support' ) ||
-							current_theme_supports( 'array_themes_gallery_support' ) ||
-							current_theme_supports( 'array_themes_slider_support' ) ||
-							current_theme_supports( 'array_themes_metabox_support' ) ) {
-					?>
+				<?php
+					if( current_theme_supports( 'array_themes_portfolio_support' ) ||
+						current_theme_supports( 'array_themes_gallery_support' ) ||
+						current_theme_supports( 'array_themes_slider_support' ) ||
+						current_theme_supports( 'array_themes_metabox_support' ) ) {
+
+					if ( !class_exists( 'Array_Toolkit' ) ) { ?>
 						<div class="panel-aside">
-							<?php if ( !class_exists( 'Array_Toolkit' ) ) { ?>
+
 								<h4><?php _e( 'Install the Array Toolkit', 'medium' ); ?></h4>
 								<p><?php _e( 'The Array Toolkit is a plugin that adds various features to your theme.', 'medium' ); ?> <?php echo $theme['Name']; ?> <?php _e( 'requires the Array Toolkit to enable the following features:', 'medium' ); ?></p>
 
@@ -142,11 +143,12 @@ function medium_getting_started_page() {
 								</ul>
 
 								<a class="button button-primary thickbox onclick" href="<?php echo esc_url( $adminurl ); ?>" title="<?php esc_attr_e( __( 'Install Array toolkit', 'medium' ) ); ?>"><?php _e( 'Install Array Toolkit Plugin', 'medium' ); ?></a>
-							<?php } else {
-								do_action( 'array_toolkit_getting_started_theme_page' );
-							} ?>
+
 						</div>
-					<?php } ?>
+					<?php } else {
+						do_action( 'array_toolkit_getting_started_theme_page' );
+					}
+				} ?>
 
 					<div class="panel-aside">
 						<h4><?php _e( 'Visit the Knowledge Base', 'medium' ); ?></h4>
