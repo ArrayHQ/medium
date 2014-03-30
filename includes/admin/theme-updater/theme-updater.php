@@ -10,7 +10,7 @@ class EDD_SL_Theme_Updater {
 
 	function __construct( $args = array() ) {
 		$args = wp_parse_args( $args, array(
-			'remote_api_url' => 'http://okaythemes.com',
+			'remote_api_url' => 'https://array.is',
 			'request_data'   => array(),
 			'theme_slug'     => get_template(),
 			'item_name'      => '',
@@ -99,7 +99,8 @@ class EDD_SL_Theme_Updater {
 				'license' 		=> $this->license,
 				'name' 			=> $this->item_name,
 				'slug' 			=> $this->theme_slug,
-				'author'		=> $this->author
+				'author'		=> $this->author,
+				'url'           => home_url()
 			);
 
 			$response = wp_remote_post( $this->remote_api_url, array( 'timeout' => 15, 'sslverify' => false, 'body' => $api_params ) );

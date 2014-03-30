@@ -1,10 +1,10 @@
 /*
 Theme Name: Medium
-Theme URI: http://themes.okaythemes.com/medium
+Theme URI: https://array.is/themes/medium-wordpress-theme/
 Description: Medium is a neatly designed blog-style theme, perfect for sharing photos, videos, quotes, and thoughts.
-Author: Mike McAlister / Okay Themes
-Author URI: http://okaythemes.com
-Version: 1.9.1
+Author: Array
+Author URI: https://array.is
+Version: 2.0
 Tags: white, gray, white, one-column, flexible-width, custom-background, custom-colors, custom-menu, editor-style, featured-images, post-formats, theme-options, translation-ready, photoblogging, threaded-comments
 License: GNU General Public License v2.0
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -26,27 +26,27 @@ html {
 }
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    outline: 0;
-    font-size: 100%;
-    vertical-align: baseline;
-    background: transparent;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
 }
 
 .clearfix:after {
-    content: "";
-    display: block;
-    clear: both;
-    visibility: hidden;
-    font-size: 0;
-    height: 0;
+	content: "";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	font-size: 0;
+	height: 0;
 }
 
 .clearfix {
-    *display: inline-block;
-    height: 1%;
+	*display: inline-block;
+	height: 1%;
 }
 
 *::-moz-selection, *::-webkit-selection, ::selection, .highlight {
@@ -59,8 +59,8 @@ ol, ul { list-style: none }
 blockquote, q { quotes: none }
 
 blockquote:before, blockquote:after, q:before, q:after {
-    content: '';
-    content: none;
+	content: '';
+	content: none;
 }
 
 :focus { outline: 0 }
@@ -70,17 +70,17 @@ ins { text-decoration: none }
 del { text-decoration: line-through }
 
 table {
-    border-collapse: collapse;
-    border-spacing: 0;
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 
 body {
-    margin: 0;
-    color: #555;
-    background: #fff;
-    font: 16px/28px 'Helvetica Neue', Helvetica, sans-serif;
-    overflow-x: hidden;
-    padding: 0;
+	margin: 0;
+	color: #555;
+	background: #fff;
+	font: 16px/28px 'Helvetica Neue', Helvetica, sans-serif;
+	overflow-x: hidden;
+	padding: 0;
 }
 
 img {
@@ -106,33 +106,33 @@ a:hover {
 }
 
 input, textarea, select {
-    font: 100% arial,sans-serif;
-    vertical-align: middle;
-    color: #000;
+	font: 100% arial,sans-serif;
+	vertical-align: middle;
+	color: #000;
 }
 
 form, fieldset {
-    margin: 0;
-    padding: 0;
-    border-style: none;
+	margin: 0;
+	padding: 0;
+	border-style: none;
 }
 
 input[type="text"], textarea {
-    color: #999;
-    border: none;
-    border: solid 1px #e4e4e4;
-    border-bottom: solid 1px #ddd;
-    background: #fff;
-    width: 100%;
-    padding: 10px;
-    -webkit-border-radius: 3px;
+	color: #999;
+	border: none;
+	border: solid 1px #e4e4e4;
+	border-bottom: solid 1px #ddd;
+	background: #fff;
+	width: 100%;
+	padding: 10px;
+	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
 	border-radius: 3px;
 	-webkit-appearance:none;
 }
 
 input:focus, textarea:focus {
-    outline: none;
+	outline: none;
 }
 
 submit {
@@ -177,25 +177,26 @@ submit:hover {
 submit:active {
 	border: 1px solid #d2d2d2;
 	border-bottom: 1px solid #d8d8d8;
-	border-radius: 3px; -webkit-box-shadow: 0px 1px 0px rgba(255,255,255,0.58), inset 0px 1px 6px rgba(0,0,0,0.07), inset 0px -16px 15px rgba(255,255,255,0.20); -moz-
-	box-shadow: 0px 1px 0px rgba(255,255,255,0.58), inset 0px 1px 6px rgba(0,0,0,0.07), inset 0px -16px 15px rgba(255,255,255,0.20); -o-box-shadow: 0px 1px 0px rgba(255,255,255,0.58), inset 0px 1px 6px rgba(0,0,0,0.07), inset 0px -16px 15px rgba(255,255,255,0.20);
+	border-radius: 3px;
+	-webkit-box-shadow: 0px 1px 0px rgba(255,255,255,0.58), inset 0px 1px 6px rgba(0,0,0,0.07), inset 0px -16px 15px rgba(255,255,255,0.20);
+	-moz-box-shadow: 0px 1px 0px rgba(255,255,255,0.58), inset 0px 1px 6px rgba(0,0,0,0.07), inset 0px -16px 15px rgba(255,255,255,0.20); -o-box-shadow: 0px 1px 0px rgba(255,255,255,0.58), inset 0px 1px 6px rgba(0,0,0,0.07), inset 0px -16px 15px rgba(255,255,255,0.20);
 	box-shadow: 0px 1px 0px rgba(255,255,255,0.58), inset 0px 1px 6px rgba(0,0,0,0.07), inset 0px -16px 15px rgba(255,255,255,0.20);
 }
 
 hr {
-    margin: 40px 0 30px;
-    border: 0;
-    border-bottom: 1px solid #eee;
-    height: 1px;
+	margin: 40px 0 30px;
+	border: 0;
+	border-bottom: 1px solid #eee;
+	height: 1px;
 }
 
 /* ===[ Text Formatting ]=== */
 
 h1, h2, h3, h4, h5, h6 {
-    margin: 0 0 25px 0;
-    font-family: 'Helvetica Neue', Helvetica, sans-serif;
-    font-weight: bold;
-    color: #444;
+	margin: 0 0 25px 0;
+	font-family: 'Helvetica Neue', Helvetica, sans-serif;
+	font-weight: bold;
+	color: #444;
 }
 
 h1 {
@@ -267,7 +268,7 @@ small {
 	font-weight: normal;
 	text-transform: none;
 	border: solid 1px #e4e4e4;
-    border-bottom: solid 1px #ddd;
+	border-bottom: solid 1px #ddd;
 	padding: 10px;
 	font-size: 20px;
 	width: 100%;
@@ -381,8 +382,8 @@ footer .search-form .submit {
 /* ===[ Logo Styles ]=== */
 
 .logo {
-    display: block;
-    margin: 0;
+	display: block;
+	margin: 0;
 }
 
 .logo-image {
@@ -406,14 +407,14 @@ footer .search-form .submit {
 }
 
 .logo-subtitle {
-    font-size: 11px;
-    font-weight: 500;
-    line-height: 20px;
-    letter-spacing: 0;
-    color:#777;
-    margin: 0;
-    display: inline-block;
-    width: 100%;
+	font-size: 11px;
+	font-weight: 500;
+	line-height: 20px;
+	letter-spacing: 0;
+	color:#777;
+	margin: 0;
+	display: inline-block;
+	width: 100%;
 }
 
 .logo-text a {
@@ -449,13 +450,13 @@ footer .search-form .submit {
 }
 
 .nav a {
-    color: #6B7072;
+	color: #6B7072;
 }
 
 .nav a:hover {
 	color: #fff;
-    text-decoration: none;
-    cursor: pointer;
+	text-decoration: none;
+	cursor: pointer;
 }
 
 .nav .current-menu-item a, .nav a:hover {
@@ -463,9 +464,9 @@ footer .search-form .submit {
 }
 
 .nav > li {
-    padding: 0;
-    margin: 0;
-    margin-bottom: 5px;
+	padding: 0;
+	margin: 0;
+	margin-bottom: 5px;
 }
 
 .nav >li:last-child {
@@ -474,15 +475,12 @@ footer .search-form .submit {
 	padding-bottom: 0;
 }
 
-.nav {
-}
-
 .nav, .nav ul {
-    margin: 0 0 0 0;
-    padding: 0;
-    list-style-type: none;
-    list-style-position: outside;
-    position: relative;
+	margin: 0 0 0 0;
+	padding: 0;
+	list-style-type: none;
+	list-style-position: outside;
+	position: relative;
 }
 
 .nav .sub-menu {
@@ -494,7 +492,7 @@ footer .search-form .submit {
 }
 
 .nav li {
-    position: relative;
+	position: relative;
 }
 
 .nav li:last-child {
@@ -525,9 +523,9 @@ nav h2 i {
 
 #wrapper {
 	float: left;
-    position: relative;
-    width: 100%;
-    padding: 0 250px 50px 250px;
+	position: relative;
+	width: 100%;
+	padding: 0 250px 50px 250px;
 }
 
 #wrapper a:hover {
@@ -535,8 +533,8 @@ nav h2 i {
 }
 
 #main {
-    width: 100%;
-    margin: 0 auto;
+	width: 100%;
+	margin: 0 auto;
 }
 
 /* ===[ Post Styles ]=== */
@@ -544,9 +542,9 @@ nav h2 i {
 .post {
 	position: relative;
 	background: #fff;
-    margin: 0 0 30px 0;
-    padding-bottom: 30px;
-    border-bottom: solid 1px #eee;
+	margin: 0 0 30px 0;
+	padding-bottom: 30px;
+	border-bottom: solid 1px #eee;
 }
 
 .post:last-child {
@@ -637,11 +635,11 @@ nav h2 i {
 	font-family: 'Helvetica Neue', Helvetica, sans-serif;
 	font-size: 18px;
 	font-weight: 500;
- 	padding: 10px 0;
- 	margin: 40px 14%;
- 	border-top: solid 5px #444;
- 	border-bottom: solid 1px #e5e5e5;
- 	color: #444;
+	padding: 10px 0;
+	margin: 40px 14%;
+	border-top: solid 5px #444;
+	border-bottom: solid 1px #e5e5e5;
+	color: #444;
 }
 
 .title-meta {
@@ -687,15 +685,15 @@ nav h2 i {
 .entry-title {
 	font-family: 'Helvetica Neue', Helvetica, sans-serif;
 	font-weight: bold;
-    font-size: 44px;
-    line-height: 50px;
-    letter-spacing: -1px;
-    margin: 0 0 24px 0;
-    padding: 0 0 0 0;
+	font-size: 44px;
+	line-height: 50px;
+	letter-spacing: -1px;
+	margin: 0 0 24px 0;
+	padding: 0 0 0 0;
 }
 
 .entry-title a {
-    color: #444;
+	color: #444;
 }
 
 .entry-title a:hover {
@@ -824,8 +822,8 @@ blockquote {
 /* ===[ Content Styles ]=== */
 
 #content {
-    width: 100%;
-    margin: 0 auto;
+	width: 100%;
+	margin: 0 auto;
 }
 
 #content p {
@@ -902,13 +900,13 @@ blockquote {
 #content .post-nav-inside {
 	font-size: 16px;
 	font-weight: 500;
- 	padding: 10px 0;
- 	margin: 0 0 0 0;
- 	border-top: solid 5px #444;
- 	border-bottom: solid 1px #e5e5e5;
- 	color: #444;
- 	display: inline-block;
- 	width: 100%;
+	padding: 10px 0;
+	margin: 0 0 0 0;
+	border-top: solid 5px #444;
+	border-bottom: solid 1px #e5e5e5;
+	color: #444;
+	display: inline-block;
+	width: 100%;
 }
 
 #content .post-nav a {
@@ -970,7 +968,7 @@ blockquote {
 
 .comments {
 	background: #fff;
-    float: left;
+	float: left;
 	width: 100%;
 	margin: 0 auto;
 	padding: 50px 14% 0 14%;
@@ -980,11 +978,11 @@ blockquote {
 	font-family: 'Helvetica Neue', Helvetica, sans-serif;
 	font-size: 18px;
 	font-weight: 500;
- 	padding: 10px 0;
- 	margin: 0 0 40px 0;
- 	border-top: solid 5px #444;
- 	border-bottom: solid 1px #e5e5e5;
- 	color: #444;
+	padding: 10px 0;
+	margin: 0 0 40px 0;
+	border-top: solid 5px #444;
+	border-bottom: solid 1px #e5e5e5;
+	color: #444;
  }
 
 .comments-open {
@@ -993,8 +991,8 @@ blockquote {
 }
 
 #respond {
-    margin: 0 0 15px 0;
-    padding: 0 0 60px 0;
+	margin: 0 0 15px 0;
+	padding: 0 0 60px 0;
 }
 
 .comment #respond {
@@ -1006,16 +1004,13 @@ blockquote {
 	font-family: 'Helvetica Neue', Helvetica, sans-serif;
 	font-size: 18px;
 	font-weight: 500;
- 	padding: 10px 0;
- 	margin: 0 0 0 0;
- 	border-top: solid 5px #444;
- 	border-bottom: solid 1px #e5e5e5;
- 	color: #444;
- 	display: inline-block;
- 	width: 100%;
-}
-
-.logged-in #respond h3 {
+	padding: 10px 0;
+	margin: 0 0 0 0;
+	border-top: solid 5px #444;
+	border-bottom: solid 1px #e5e5e5;
+	color: #444;
+	display: inline-block;
+	width: 100%;
 }
 
 .commentlist #respond h3 {
@@ -1023,10 +1018,10 @@ blockquote {
 }
 
 #respond label {
-    font-size: 13px;
-    font-weight: 500;
-    margin: 5px 0 0 0;
-    color: #555;
+	font-size: 13px;
+	font-weight: 500;
+	margin: 5px 0 0 0;
+	color: #555;
 }
 
 #commentform p {
@@ -1044,14 +1039,14 @@ blockquote {
 }
 
 #respond input[type="text"], #respond textarea {
-    color: #999;
-    border: none;
-    border: solid 1px #e4e4e4;
-    border-bottom: solid 1px #ddd;
-    background: #fff;
-    width: 100%;
-    padding: 9px 10px;
-    -webkit-border-radius: 3px;
+	color: #999;
+	border: none;
+	border: solid 1px #e4e4e4;
+	border-bottom: solid 1px #ddd;
+	background: #fff;
+	width: 100%;
+	padding: 9px 10px;
+	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
 	border-radius: 3px;
 	-webkit-appearance:none;
@@ -1063,12 +1058,12 @@ blockquote {
 }
 
 #respond input:focus, #respond textarea:focus {
-    outline: none;
+	outline: none;
 }
 
 #respond textarea {
-    line-height: 22px;
-    width: 100%;
+	line-height: 22px;
+	width: 100%;
 }
 
 #commentform #submit {
@@ -1113,8 +1108,9 @@ blockquote {
 #commentform #submit:active {
 	border: 1px solid #d2d2d2;
 	border-bottom: 1px solid #d8d8d8;
-	border-radius: 3px; -webkit-box-shadow: 0px 1px 0px rgba(255,255,255,0.58), inset 0px 1px 6px rgba(0,0,0,0.07), inset 0px -16px 15px rgba(255,255,255,0.20); -moz-
-	box-shadow: 0px 1px 0px rgba(255,255,255,0.58), inset 0px 1px 6px rgba(0,0,0,0.07), inset 0px -16px 15px rgba(255,255,255,0.20); -o-box-shadow: 0px 1px 0px rgba(255,255,255,0.58), inset 0px 1px 6px rgba(0,0,0,0.07), inset 0px -16px 15px rgba(255,255,255,0.20);
+	border-radius: 3px;
+	-webkit-box-shadow: 0px 1px 0px rgba(255,255,255,0.58), inset 0px 1px 6px rgba(0,0,0,0.07), inset 0px -16px 15px rgba(255,255,255,0.20);
+	-moz-box-shadow: 0px 1px 0px rgba(255,255,255,0.58), inset 0px 1px 6px rgba(0,0,0,0.07), inset 0px -16px 15px rgba(255,255,255,0.20); -o-box-shadow: 0px 1px 0px rgba(255,255,255,0.58), inset 0px 1px 6px rgba(0,0,0,0.07), inset 0px -16px 15px rgba(255,255,255,0.20);
 	box-shadow: 0px 1px 0px rgba(255,255,255,0.58), inset 0px 1px 6px rgba(0,0,0,0.07), inset 0px -16px 15px rgba(255,255,255,0.20);
 }
 
@@ -1137,11 +1133,11 @@ blockquote {
 	position: relative;
 	float: left;
 	width: 100%;
-    padding: 0 0 15px 0;
-    margin: 0 0 30px 0;
-    border-bottom: solid 1px #e5e5e5;
-    position: relative;
-    list-style:none;
+	padding: 0 0 15px 0;
+	margin: 0 0 30px 0;
+	border-bottom: solid 1px #e5e5e5;
+	position: relative;
+	list-style:none;
 }
 
 .commentlist li:last-child {
@@ -1150,18 +1146,18 @@ blockquote {
 }
 
 .commentlist > li:before {
-    content: "0" counter(li);
-    counter-increment:li;
-    /* Position and style the number */
-    position:absolute;
-    font-family: 'NovecentowideLightBold', 'Helvetica Neue', Helvetica, sans-serif;
-    letter-spacing: -1px;
-    left:-50px;
-    top: -5px;
-    color:#ddd;
-    font-size: 20px;
-    font-weight: bold;
-    display: none;
+	content: "0" counter(li);
+	counter-increment:li;
+	/* Position and style the number */
+	position:absolute;
+	font-family: 'NovecentowideLightBold', 'Helvetica Neue', Helvetica, sans-serif;
+	letter-spacing: -1px;
+	left:-50px;
+	top: -5px;
+	color:#ddd;
+	font-size: 20px;
+	font-weight: bold;
+	display: none;
 }
 
 .commentlist .children {
@@ -1181,7 +1177,7 @@ blockquote {
 }
 
 .comment-block {
-    padding: 0;
+	padding: 0;
 }
 
 .comment-text {
@@ -1203,12 +1199,12 @@ blockquote {
 #cancel-comment-reply-link {
 	position: relative;
 	color: #999;
-    margin: 0 0 0 0;
-    font-size: 9px;
-    font-weight: bold;
-    text-transform: uppercase;
-    display: inline-block;
-    -webkit-transition: .07s ease-in;
+	margin: 0 0 0 0;
+	font-size: 9px;
+	font-weight: bold;
+	text-transform: uppercase;
+	display: inline-block;
+	-webkit-transition: .07s ease-in;
 	-moz-transition: .07s ease-in;
 	-o-transition: .07s ease-in;
 	transition: .07s ease-in;
@@ -1256,18 +1252,18 @@ blockquote {
 }
 
 .comment-awaiting-moderation {
-    color: #555;
-    font-weight: bold;
-    font-size: 11px;
+	color: #555;
+	font-weight: bold;
+	font-size: 11px;
 }
 
 .vcard {
 	width: 100%;
-    float: left;
+	float: left;
 }
 
 .vcard img {
-    float: left;
+	float: left;
 	height: 32px;
 	width: 32px;
 	-webkit-border-radius: 2px;
@@ -1276,12 +1272,12 @@ blockquote {
 }
 
 .fn {
-    float: left;
-    font-style: normal;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 18px;
-    margin-top: 0;
+	float: left;
+	font-style: normal;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 18px;
+	margin-top: 0;
 }
 
 .fn a {
@@ -1299,17 +1295,17 @@ blockquote {
 }
 
 .comment-meta {
-    float: left;
-    margin: 0 0 0 12px;
-    line-height: 10px;
+	float: left;
+	margin: 0 0 0 12px;
+	line-height: 10px;
 }
 
 .comment-time {
 	text-transform: uppercase;
-    font-size: 11px;
-    color: #bbb;
-    display: inline-block;
-    margin-top: 4px;
+	font-size: 11px;
+	color: #bbb;
+	display: inline-block;
+	margin-top: 4px;
 }
 
 .comment-time:hover {
@@ -1461,9 +1457,9 @@ footer .icons {
 
 .wp-caption {
 	color: #999;
-    max-width: 96%; /* Image does not overflow the content area */
-    text-align: center;
-    text-transform: uppercase;
+	max-width: 96%; /* Image does not overflow the content area */
+	text-align: center;
+	text-transform: uppercase;
 }
 
 .wp-caption.alignnone { margin: 5px 20px 20px 0 }
@@ -1485,18 +1481,18 @@ img.alignright {
 }
 
 .wp-caption img {
-    border: 0 none;
-    height: auto;
-    margin: 0;
-    max-width: 98.5%;
-    padding: 0;
-    width: auto;
+	border: 0 none;
+	height: auto;
+	margin: 0;
+	max-width: 98.5%;
+	padding: 0;
+	width: auto;
 }
 
 .wp-caption p.wp-caption-text {
-    font-size: 10px !important;
-    margin: 0 !important;
-    padding: 3px 0 0 0!important;
+	font-size: 10px !important;
+	margin: 0 !important;
+	padding: 3px 0 0 0!important;
 }
 
 .gallery {
@@ -1508,18 +1504,18 @@ img.alignright {
 .gallery-item {
 	float: none !important;
 	display: inline-block;
-    width: 110px !important;
-    margin-right: 2px;
-    margin-bottom: 2px;
+	width: 110px !important;
+	margin-right: 2px;
+	margin-bottom: 2px;
 }
 
 .gallery-icon { width: 87px }
 
 .gallery-item img {
-    width: 75px;
-    height: auto;
-    padding: 5px;
-    border: solid 1px #e6e6e6 !important;
+	width: 75px;
+	height: auto;
+	padding: 5px;
+	border: solid 1px #e6e6e6 !important;
 }
 
 .gallery-item img:hover {
@@ -1534,14 +1530,14 @@ img.alignright {
 }
 
 input[type="text"], input[type="email"], textarea {
-    color: #777;
-    border: none;
-    border: solid 1px #e4e4e4;
-    border-bottom: solid 1px #ddd;
-    background: #fff;
-    width: 100%;
-    padding: 10px;
-    -webkit-border-radius: 3px;
+	color: #777;
+	border: none;
+	border: solid 1px #e4e4e4;
+	border-bottom: solid 1px #ddd;
+	background: #fff;
+	width: 100%;
+	padding: 10px;
+	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
 	border-radius: 3px;
 }
@@ -1588,8 +1584,10 @@ input[type="text"], input[type="email"], textarea {
 .wpcf7-submit:active {
 	border: 1px solid #d2d2d2;
 	border-bottom: 1px solid #d8d8d8;
-	border-radius: 3px; -webkit-box-shadow: 0px 1px 0px rgba(255,255,255,0.58), inset 0px 1px 6px rgba(0,0,0,0.07), inset 0px -16px 15px rgba(255,255,255,0.20); -moz-
-	box-shadow: 0px 1px 0px rgba(255,255,255,0.58), inset 0px 1px 6px rgba(0,0,0,0.07), inset 0px -16px 15px rgba(255,255,255,0.20); -o-box-shadow: 0px 1px 0px rgba(255,255,255,0.58), inset 0px 1px 6px rgba(0,0,0,0.07), inset 0px -16px 15px rgba(255,255,255,0.20);
+	border-radius: 3px;
+	-webkit-box-shadow: 0px 1px 0px rgba(255,255,255,0.58), inset 0px 1px 6px rgba(0,0,0,0.07), inset 0px -16px 15px rgba(255,255,255,0.20);
+	-moz-box-shadow: 0px 1px 0px rgba(255,255,255,0.58), inset 0px 1px 6px rgba(0,0,0,0.07), inset 0px -16px 15px rgba(255,255,255,0.20);
+	-o-box-shadow: 0px 1px 0px rgba(255,255,255,0.58), inset 0px 1px 6px rgba(0,0,0,0.07), inset 0px -16px 15px rgba(255,255,255,0.20);
 	box-shadow: 0px 1px 0px rgba(255,255,255,0.58), inset 0px 1px 6px rgba(0,0,0,0.07), inset 0px -16px 15px rgba(255,255,255,0.20);
 }
 

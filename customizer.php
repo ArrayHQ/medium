@@ -1,14 +1,14 @@
 <?php
 
 // ------------- Theme Customizer  ------------- //
- 
+
 add_action( 'customize_register', 'medium_customizer_register' );
 
 function medium_customizer_register( $wp_customize ) {
 
-	class Okay_Customize_Textarea_Control extends WP_Customize_Control {
+	class Medium_Customize_Textarea_Control extends WP_Customize_Control {
 	    public $type = 'textarea';
-	 
+
 	    public function render_content() {
 	        ?>
 	        <label>
@@ -18,32 +18,32 @@ function medium_customizer_register( $wp_customize ) {
 	        <?php
 	    }
 	}
-	
+
 	//Style Options
 
 	$wp_customize->add_section( 'medium_customizer_basic', array(
 		'title' 	=> __( 'Medium Options', 'medium' ),
 		'priority' 	=> 1
 	) );
-	
+
 	//Logo Image
 	$wp_customize->add_setting( 'medium_customizer_logo', array(
 	) );
-	
+
 	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'medium_customizer_logo', array(
 		'label' 	=> __( 'Logo Upload', 'medium' ),
 		'section' 	=> 'medium_customizer_basic',
 		'settings' 	=> 'medium_customizer_logo',
 		'priority' 	=> 1
 	) ) );
-	
+
 	//Retina Logo
 	$wp_customize->add_setting( 'medium_customizer_retina_logo', array(
         'default'   => 'disabled',
         'capability' => 'edit_theme_options',
         'type'      => 'option',
     ) );
-    
+
     $wp_customize->add_control( 'retina_select_box', array(
         'settings' 	=> 'medium_customizer_retina_logo',
         'label'   	=> __( 'Retina Logo', 'medium' ),
@@ -54,36 +54,36 @@ function medium_customizer_register( $wp_customize ) {
             'disabled' 	=> __( 'Disabled', 'medium' )
         ),
     ) );
-	
+
 	//Accent Color
 	$wp_customize->add_setting( 'medium_customizer_accent', array(
 		'default' 	=> '#3ac1e8'
 	) );
-	
+
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'medium_customizer_accent', array(
 		'label'   	=> __( 'Accent Color', 'medium' ),
 		'section' 	=> 'medium_customizer_basic',
 		'settings'  => 'medium_customizer_accent'
 	) ) );
-	
+
 	//Link Color
 	$wp_customize->add_setting( 'medium_customizer_link', array(
 		'default' 	=> '#3ac1e8'
 	) );
-	
+
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'medium_customizer_link', array(
 		'label'   	=> __( 'Link Color', 'medium' ),
 		'section' 	=> 'medium_customizer_basic',
 		'settings'  => 'medium_customizer_link'
 	) ) );
-	
+
 	//Infinite Scroll
 	$wp_customize->add_setting( 'medium_customizer_infinite', array(
         'default'   => 'disabled',
         'capability' => 'edit_theme_options',
         'type'      => 'option',
     ) );
-    
+
     $wp_customize->add_control( 'infinite_select_box', array(
         'settings' 	=> 'medium_customizer_infinite',
         'label'   	=> __( 'Infinite Scrolling', 'medium' ),
@@ -94,16 +94,16 @@ function medium_customizer_register( $wp_customize ) {
             'disabled' 	=> __( 'Disabled', 'medium' )
         ),
     ) );
-    
+
     //Custom CSS
 	$wp_customize->add_setting( 'medium_customizer_css', array(
         'default' 	=> '',
     ) );
-    
-    $wp_customize->add_control( new Okay_Customize_Textarea_Control( $wp_customize, 'medium_customizer_css', array(
+
+    $wp_customize->add_control( new Medium_Customize_Textarea_Control( $wp_customize, 'medium_customizer_css', array(
 	    'label'   	=> __( 'Custom CSS', 'medium' ),
 	    'section' 	=> 'medium_customizer_basic',
 	    'settings'  => 'medium_customizer_css',
 	) ) );
-	
+
 }
