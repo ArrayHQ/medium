@@ -22,7 +22,7 @@ function medium_customizer_register( $wp_customize ) {
 	//Style Options
 
 	$wp_customize->add_section( 'medium_customizer_basic', array(
-		'title' 	=> __( 'Medium Options', 'medium' ),
+		'title' 	=> __( 'Theme Options', 'medium' ),
 		'priority' 	=> 1
 	) );
 

@@ -1,13 +1,16 @@
 jQuery(document).ready(function( $ ) {
 
 		//Flexslider
-		$('.flexslider').flexslider({
-			animation: "fade",
-			animationSpeed: 150
-		});
+		function flex() {
+			$('.flexslider').flexslider({
+				animation: "fade",
+				animationSpeed: 150
+			});
 
-		$(".flex-next").html('<i class="fa fa-chevron-right"></i>');
-		$(".flex-prev").html('<i class="fa fa-chevron-left"></i>');
+			$(".flex-next").html('<i class="fa fa-chevron-right"></i>');
+			$(".flex-prev").html('<i class="fa fa-chevron-left"></i>');
+		}
+		flex();
 
 
 		//Fitvid
@@ -15,7 +18,6 @@ jQuery(document).ready(function( $ ) {
 			$("article iframe").not(".fitvid iframe").wrap("<div class='fitvid'/>");
 			$(".fitvid").fitVids();
 		}
-
 		fitvids();
 
 
@@ -31,7 +33,7 @@ jQuery(document).ready(function( $ ) {
 			      itemSelector: 'article',
 			      contentSelector: '.posts',
 			      appendCallback: true
-			},function () { fitvids(); });
+			},function () { fitvids(); flex(); });
 		}
 
 
