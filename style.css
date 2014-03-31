@@ -1403,6 +1403,10 @@ footer .widget ul li:last-child {
 	margin-bottom: 0;
 }
 
+footer .widget p {
+	margin-bottom: 5%;
+}
+
 .flickr-widget li, .dribbble-widget li {
 	width: 100% !important;
 	height: auto !important;
