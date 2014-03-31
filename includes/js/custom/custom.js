@@ -68,11 +68,4 @@ jQuery(document).ready(function( $ ) {
 			}
 		} );
 
-
-		//Retina Logo
-		$('.logo-retina').each(function(){
-		    $(this).width($(this).width() * 0.5);
-		    $(this).fadeIn(200);
-		});
-
 });

@@ -42,10 +42,24 @@
 						<?php get_search_form();?>
 					</div>
 
-					<hgroup>
-						<h1 class="logo-text"><a href="<?php echo home_url( '/' ); ?>" title="<?php bloginfo('name'); ?>"><?php bloginfo('name') ?></a></h1>
-						<h2 class="logo-subtitle"><?php bloginfo('description') ?></h2>
-					</hgroup>
+					<?php if ( get_theme_mod( 'medium_customizer_logo' ) ) { ?>
+
+						<hgroup>
+							<h1 class="logo-image">
+								<a href="<?php echo home_url(); ?>" title="<?php bloginfo('name'); ?>">
+									<img class="logo" src="<?php echo get_theme_mod( 'medium_customizer_logo', '' ); ?>" alt="<?php bloginfo('name'); ?>"/>
+								</a>
+							</h1>
+						</hgroup>
+
+					<?php } else { ?>
+
+						<hgroup>
+							<h1 class="logo-text"><a href="<?php echo home_url( '/' ); ?>" title="<?php bloginfo('name'); ?>"><?php bloginfo('name') ?></a></h1>
+							<h2 class="logo-subtitle"><?php bloginfo('description') ?></h2>
+						</hgroup>
+
+					<?php } ?>
 
 					<nav role="navigation" class="header-nav open-widget">
 						<?php wp_nav_menu( array( 'theme_location' => 'main', 'menu_class' => 'nav', 'container' => false ) ); ?>
