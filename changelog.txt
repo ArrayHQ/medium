@@ -1,3 +1,6 @@
+= 2.1 - 4/1/14 =
+* Fixed bug in customizer preview
+
 = 2.0 - 3/29/14 =
 * Prepared for Array
 * Massive cleanup of all files

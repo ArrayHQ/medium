@@ -22,9 +22,6 @@ function medium_setup() {
 	// Admin functionality
 	if ( is_admin() ) {
 
-		// Customizer settings
-		require_once( get_template_directory() . '/customizer.php' );
-
 		// Load Getting Started page and initialize EDD update class
 		require_once( get_template_directory() . '/includes/admin/getting-started/getting-started.php' );
 
@@ -34,6 +31,9 @@ function medium_setup() {
 		/* Add custom post styles */
 		require( get_template_directory() . '/includes/editor/add-styles.php' );
 	}
+
+	// Customizer settings
+	require_once( get_template_directory() . '/customizer.php' );
 
 	// Add posts and comments RSS feed links to head
 	add_theme_support( 'automatic-feed-links' );
