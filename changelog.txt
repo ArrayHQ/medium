@@ -1,0 +1,66 @@
+= 2.1 - 4/1/14 =
+* Fixed bug in customizer preview
+
+= 2.0 - 3/29/14 =
+* Prepared for Array
+* Massive cleanup of all files
+* Added Getting Started page
+
+Note: If your sidebar or footer widgets disappear, you simply need to go into Appearance -> Widgets and drag them back into the appropriate widget area.
+
+** Modified **
+Please update your entire theme.
+
+= 1.9 - 2/5/2014 =
+Added fix for duplicate fitvid wrappers with infinite scroll.
+
+** Modified **
+style.css
+custom.js
+includes/updates/EDD_SL_Setup.php
+
+= 1.8 - 1/14/13 =
+Added fix for page link colors.
+
+= 1.7 - 10/11/13 =
+* After much feedback, I've removed the accordion feature of the left hand sidebar. The sidebar will now be static and function like the right hand sidebar. Rejoice!
+* Improved mobile menu usability. Menu and widgets are now closed by default, and can be toggled open with the navigation icon next to the search.
+
+** Modified **
+header.php
+includes/js/custom/custom.js
+includes/updates/EDD_SL_Setup.php
+media-queries.css
+searchform.php
+style.css
+
+= 1.6 - 10/4/13 =
+* Fixed responsive video in post content area.
+
+** Modified **
+style.css
+includes/js/custom/custom.js
+includes/updates/EDD_SL_Setup.php
+
+= 1.5 – 9/29/13 =
+* Added in-dash theme update support. You will now be able to quickly and seamlessly update your themes from within your dashboard. Visit Appearance -> Themes to check for an update. If there is one, you'll see a notice at the top of the screen.
+* General file cleanup. Reformatted functions.php to be more standards compliant.
+* Changed localization string from 'okay' to 'medium'.
+* Light style changes here and there.
+
+= 1.4 – 4/12/13 =
+* Updated Contact Form 7 email input styles.
+
+= 1.3 – 2/17/13 =
+* Added image gallery via the Okay Toolkit. Medium now uses the WordPress 3.5 media manager to manage galleries. To use the new gallery, you must update Medium, grab the latest Okay Toolkit (v1.5) and have WordPress 3.5 or higher. Please see the revised help file (http://array.is/articles/medium) for more information on how to use the new gallery!
+* Added Custom CSS box to the Medium Styling settings in the Customizer.
+
+= 1.2 – 12/25/12 =
+* Recreated .mo and .po localization file for 1 updated string.
+
+= 1.1 – 12/13/12 =
+* Fixed bug in left navigation.
+* Updated help file to show instructions for adding a custom title to pages.
+
+= 1.0 – 12/8/12 =
+* Initial release.

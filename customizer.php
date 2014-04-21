@@ -22,7 +22,7 @@ function medium_customizer_register( $wp_customize ) {
 	//Style Options
 
 	$wp_customize->add_section( 'medium_customizer_basic', array(
-		'title' 	=> __( 'Medium Options', 'medium' ),
+		'title' 	=> __( 'Theme Options', 'medium' ),
 		'priority' 	=> 1
 	) );
 
@@ -36,24 +36,6 @@ function medium_customizer_register( $wp_customize ) {
 		'settings' 	=> 'medium_customizer_logo',
 		'priority' 	=> 1
 	) ) );
-
-	//Retina Logo
-	$wp_customize->add_setting( 'medium_customizer_retina_logo', array(
-        'default'   => 'disabled',
-        'capability' => 'edit_theme_options',
-        'type'      => 'option',
-    ) );
-
-    $wp_customize->add_control( 'retina_select_box', array(
-        'settings' 	=> 'medium_customizer_retina_logo',
-        'label'   	=> __( 'Retina Logo', 'medium' ),
-        'section' 	=> 'medium_customizer_basic',
-        'type'    	=> 'select',
-        'choices'   => array(
-            'enabled' 	=> __( 'Enabled', 'medium' ),
-            'disabled' 	=> __( 'Disabled', 'medium' )
-        ),
-    ) );
 
 	//Accent Color
 	$wp_customize->add_setting( 'medium_customizer_accent', array(
