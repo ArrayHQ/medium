@@ -1,3 +1,10 @@
+=  2.1.1 - 4/21/14 =
+* Fixed issues in the Getting Started page and theme updates when using child themes.
+
+** Modified **
+includes/admin/getting-started/getting-started.php
+style.css
+
 = 2.1 - 4/1/14 =
 * Fixed bug in customizer preview
 

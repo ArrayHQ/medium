@@ -47,7 +47,7 @@ function medium_getting_started_page() {
 	$status             = get_option( 'medium_license_key_status' );
 
 	// Theme info
-	$theme              = wp_get_theme();
+	$theme              = wp_get_theme( 'medium' );
 
 	// Lowercase theme name for resources links
 	$theme_name_lower   = get_template();
@@ -277,6 +277,8 @@ define( 'MEDIUM_SL_STORE_URL', 'https://array.is' );
 // The name of your product. This should match the download name in EDD exactly
 define( 'MEDIUM_SL_THEME_NAME', 'Medium WordPress Theme' );
 
+// The theme version to use in the updater. Stores parent version to avoid child conflicts.
+define( 'MEDIUM_SL_THEME_VERSION', wp_get_theme( 'medium' )->get( 'Version' ) );
 
 /***********************************************
 * Include update class
@@ -292,11 +294,11 @@ function medium_theme_updater() {
 	$medium_license = trim( get_option( 'medium_license_key' ) );
 
 	$edd_updater = new EDD_SL_Theme_Updater( array(
-			'remote_api_url' 	=> MEDIUM_SL_STORE_URL,           // Our store URL that is running EDD
-			'version' 			=> wp_get_theme()->get( 'Version' ), // The current theme version we are running
-			'license' 			=> $medium_license,               // The license key (used get_option above to retrieve from DB)
-			'item_name' 		=> MEDIUM_SL_THEME_NAME,          // The name of this theme
-			'author'			=> 'Array'                           // The author's name
+			'remote_api_url' => MEDIUM_SL_STORE_URL,     // Our store URL that is running EDD
+			'version'        => MEDIUM_SL_THEME_VERSION, // The current theme version we are running
+			'license'        => $medium_license,         // The license key (used get_option above to retrieve from DB)
+			'item_name'      => MEDIUM_SL_THEME_NAME,    // The name of this theme
+			'author'         => 'Array'                  // The author's name
 		)
 	);
 }
