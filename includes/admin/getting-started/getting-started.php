@@ -52,9 +52,13 @@ function medium_getting_started_page() {
 	// Lowercase theme name for resources links
 	$theme_name_lower   = get_template();
 
-	// Parse changelog text for use in thickbox
-	$changelog = file_get_contents( TEMPLATEPATH . "/changelog.txt" );
-	$changelog = nl2br( $changelog, true );
+	// Grab the change log from array.is for display in the Latest Updates tab
+	$changelog = wp_remote_get( 'https://array.is/themes/medium-wordpress-theme/changelog/' );
+	if( $changelog && !is_wp_error( $changelog ) ) {
+		$changelog = $changelog['body'];
+	} else {
+		$changelog = __( 'There seems to be a problem retrieving the latest updates information from Array. Please check back later.', 'medium' );
+	}
 
 	// Array Toolkit URL
 	if( is_multisite() ) {
