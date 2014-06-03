@@ -36,7 +36,7 @@ Visit our support forum at array.is and we'll give you a hand.
 1. The theme home page filled with demo content.
 
 == Change Log ==
-= 2.1.2 - 5/30/14 =
+= 2.1.2 - 6/02/14 =
 * Changes to the Latest Updates screen.
 * Removed changelog.txt and moved change log information to readme.txt
 * Minor housekeeping.
