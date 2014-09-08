@@ -4,7 +4,7 @@ Donate link: https://array.is/
 Tags: blogging, minimal, portfolio, photo, video
 Requires at least: 3.8
 Tested up to: 3.9.1
-Stable tag: 2.1.3
+Stable tag: 2.1.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -36,6 +36,9 @@ Visit our support forum at array.is and we'll give you a hand.
 1. The theme home page filled with demo content.
 
 == Change Log ==
+= 2.1.4 - 9/8/14 =
+* Improved contrast of left and right sidebar text color and links.
+
 = 2.1.3 - 7/24/14 =
 * Enhanced default gallery styles.
 * Added styling for admin bar.
