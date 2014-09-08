@@ -1379,6 +1379,16 @@ footer {
 	line-height: 20px;
 }
 
+.admin-bar footer {
+	top: 32px;
+}
+
+@media screen and (max-width: 600px) {
+	#wpadminbar {
+		position: fixed;
+	}
+}
+
 footer .widget {
 	width: 100%;
 	display: inline-block;
@@ -1504,32 +1514,11 @@ img.alignright {
 	padding: 3px 0 0 0!important;
 }
 
-.gallery {
-	margin-bottom: 30px !important;
+#content .gallery {
+	margin-bottom: 5%;
 }
 
-.gallery-caption { text-align: center }
-
-.gallery-item {
-	float: none !important;
-	display: inline-block;
-	width: 110px !important;
-	margin-right: 2px;
-	margin-bottom: 2px;
-}
-
-.gallery-icon { width: 87px }
-
-.gallery-item img {
-	width: 75px;
-	height: auto;
-	padding: 5px;
-	border: solid 1px #e6e6e6 !important;
-}
-
-.gallery-item img:hover {
-	border: solid 1px #ccc !important;
-}
+#content .gallery-item img { border: none; }
 
 /* ===[ WPCF7 Styles ]=== */
 
