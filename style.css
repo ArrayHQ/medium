@@ -4,7 +4,7 @@ Theme URI: https://array.is/themes/medium-wordpress-theme/
 Description: Medium is a neatly designed blog-style theme, perfect for sharing photos, videos, quotes, and thoughts.
 Author: Array
 Author URI: https://array.is
-Version: 2.1.2
+Version: 2.1.4
 Tags: white, gray, white, one-column, flexible-width, custom-background, custom-colors, custom-menu, editor-style, featured-images, post-formats, theme-options, translation-ready, photoblogging, threaded-comments
 License: GNU General Public License v2.0
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -235,7 +235,7 @@ small {
 /* ===[ Header Area Styles ]=== */
 
 .header {
-	color: #6B7072;
+	color: #92999C;
 	position: fixed;
 	background: #303739 url(images/sidebar.jpg);
 	z-index: 10;
@@ -322,8 +322,8 @@ small {
 .header .search-form-input {
 	position: relative;
 	background: #202527;
-	color: #555;
-	padding-left: 28px;
+	color: #92999C;
+	padding-left: 32px;
 	-webkit-border-radius: 40px;
 	-moz-border-radius: 40px;
 	border-radius: 40px;
@@ -353,7 +353,7 @@ small {
 	content: "\f002";
 	font-size: 13px;
 	position: absolute;
-	top: 22px;
+	top: 20px;
 	left: 25px;
 	display: block;
 	z-index: 50;
@@ -450,7 +450,7 @@ footer .search-form .submit {
 }
 
 .nav a {
-	color: #6B7072;
+	color: #92999C;
 }
 
 .nav a:hover {
@@ -737,10 +737,11 @@ blockquote {
 
 .header .widget:last-child {
 	border-bottom: none;
+	padding-bottom: 50px;
 }
 
 .header .widget a {
-	color: #6B7072;
+	color: #92999C;
 }
 
 .header .widget a:hover {
@@ -1378,12 +1379,26 @@ footer {
 	line-height: 20px;
 }
 
+.admin-bar footer {
+	top: 32px;
+}
+
+@media screen and (max-width: 600px) {
+	#wpadminbar {
+		position: fixed;
+	}
+}
+
 footer .widget {
 	width: 100%;
 	display: inline-block;
 	padding: 25px 20px 30px 20px;
 	border-bottom: solid 1px #e4e4e4;
 	border-top: solid 1px #f7f7f7;
+}
+
+footer a {
+	color: #888;
 }
 
 footer .widgettitle {
@@ -1432,7 +1447,7 @@ footer .icons {
 	margin: 0;
 	padding: 32px 20px;
 	font-size: 11px;
-	color: #bbb;
+	color: #888;
 	border-top: solid 1px #f7f7f7;
 }
 
@@ -1499,32 +1514,11 @@ img.alignright {
 	padding: 3px 0 0 0!important;
 }
 
-.gallery {
-	margin-bottom: 30px !important;
+#content .gallery {
+	margin-bottom: 5%;
 }
 
-.gallery-caption { text-align: center }
-
-.gallery-item {
-	float: none !important;
-	display: inline-block;
-	width: 110px !important;
-	margin-right: 2px;
-	margin-bottom: 2px;
-}
-
-.gallery-icon { width: 87px }
-
-.gallery-item img {
-	width: 75px;
-	height: auto;
-	padding: 5px;
-	border: solid 1px #e6e6e6 !important;
-}
-
-.gallery-item img:hover {
-	border: solid 1px #ccc !important;
-}
+#content .gallery-item img { border: none; }
 
 /* ===[ WPCF7 Styles ]=== */
 
