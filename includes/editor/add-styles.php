@@ -29,6 +29,9 @@ function medium_tiny_mce_before_init( $settings ) {
 		)
 	);
 
+	// Merge old and new styles
+	$settings['style_formats_merge'] = true;
+
 	$settings['style_formats'] = json_encode( $style_formats );
 	return $settings;
 }
