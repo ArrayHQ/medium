@@ -27,9 +27,6 @@ function medium_setup() {
 
 		// Meta boxes
 		require_once( get_template_directory() . '/includes/admin/metabox/metabox.php' );
-
-		/* Add custom post styles */
-		require( get_template_directory() . '/includes/editor/add-styles.php' );
 	}
 
 	// Customizer settings
