@@ -37,7 +37,7 @@ Visit our support forum at array.is and we'll give you a hand.
 
 == Change Log ==
 = 2.1.6 - 9/13/14 =
-* Removed editor style dropdown for intro title and highlight styles. These styles can still be used by switching to the Text view and adding a span with the respective class, like so: <span class="highlight">Highlighted Text!</span> <span class="intro">Intro Title!</span>
+* Removed editor style dropdown for intro title and highlight styles. These styles can still be used by switching to the Text view and adding a span with the respective class. (.highlight, .intro)
 
 = 2.1.5 - 9/10/14 =
 * Improved compatibility with post editing plugins.
