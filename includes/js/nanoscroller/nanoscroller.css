@@ -21,7 +21,7 @@
 }
 
 .navigation-content .navigation-inner:focus {
-    outline: thin dotted;
+    outline: none;
 }
 
 .navigation-content .navigation-inner::-webkit-scrollbar {
