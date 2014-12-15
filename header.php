@@ -40,6 +40,7 @@
 				<div class="navigation-inner">
 					<div class="header-search">
 						<?php get_search_form();?>
+						<a class="menu-toggle" href="#"><?php _e( 'Menu', 'medium' ); ?> <i class="fa fa-bars"></i></a>
 					</div>
 
 					<?php if ( get_theme_mod( 'medium_customizer_logo' ) ) { ?>

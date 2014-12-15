@@ -21,6 +21,8 @@ function medium_setup() {
 
 	// Admin functionality
 	if ( is_admin() ) {
+		// Add editor styles
+		add_editor_style();
 
 		// Load Getting Started page and initialize EDD update class
 		require_once( get_template_directory() . '/includes/admin/getting-started/getting-started.php' );
@@ -70,26 +72,26 @@ function medium_scripts_styles() {
 	// Get theme version
 	$version = wp_get_theme()->Version;
 
-	//Enqueue Styles
+	// Enqueue Styles
 
-	//Main Stylesheet
+	// Main Stylesheet
 	wp_enqueue_style( 'medium-style', get_stylesheet_uri() );
 
-	//Font Awesome CSS
+	// Font Awesome CSS
 	wp_enqueue_style( 'font-awesome-css', get_template_directory_uri() . "/includes/fonts/fontawesome/font-awesome.min.css", array(), '4.0.3', 'screen' );
 
-	//NanoScroller
+	// NanoScroller
 	wp_enqueue_style( 'nanoscroller-css', get_template_directory_uri() . "/includes/js/nanoscroller/nanoscroller.css", array(), '0.1', 'screen' );
 
-	//Media Queries CSS
+	// Media Queries CSS
 	wp_enqueue_style( 'media-queries-css', get_template_directory_uri() . "/media-queries.css", array( 'medium-style' ), $version, 'screen' );
 
-	//Flexslider
+	// Flexslider
 	wp_enqueue_style( 'flexslider-css', get_template_directory_uri() . "/includes/styles/flexslider.css", array(), '2.1', 'screen' );
 
-	//Enqueue Scripts
+	// Enqueue Scripts
 
-	//Custom JS
+	// Custom JS
 	wp_enqueue_script( 'custom-js', get_template_directory_uri() . '/includes/js/custom/custom.js', array( 'jquery' ), '20130731', true );
 	wp_localize_script( 'custom-js', 'custom_js_vars', array(
 			'infinite_scroll' 		=> get_option( 'medium_customizer_infinite' ),
@@ -97,19 +99,19 @@ function medium_scripts_styles() {
 		)
 	);
 
-	//FidVid
+	// FidVid
 	wp_enqueue_script('fitvid-js', get_template_directory_uri() . '/includes/js/fitvid/jquery.fitvids.js', array( 'jquery' ), '1.0.3', true );
 
-	//Flexslider
+	// Flexslider
 	wp_enqueue_script('flexslider-js', get_template_directory_uri() . '/includes/js/flexslider/jquery.flexslider-min.js', array(), '2.1', true );
 
-	//Enquire
+	// Enquire
 	wp_enqueue_script('enquire-js', get_template_directory_uri() . '/includes/js/enquire/enquire.min.js', array(), '1.5.3', true );
 
-	//NanoScroller
+	// NanoScroller
 	wp_enqueue_script('nanoscroller-js', get_template_directory_uri() . '/includes/js/nanoscroller/jquery.nanoscroller.min.js', array( 'jquery' ), $version, true );
 
-	//Infinite Scroll
+	// Infinite Scroll
 	if ( get_option( 'medium_customizer_infinite' ) == 'disabled' ) { } else {
 		wp_enqueue_script( 'infinite-js', get_template_directory_uri() . '/includes/js/infinitescroll/jquery.infinitescroll.min.js', array( 'jquery' ), '2.0', true );
 	}

@@ -4,7 +4,7 @@ Donate link: https://array.is/
 Tags: blogging, minimal, portfolio, photo, video
 Requires at least: 3.8
 Tested up to: 3.9.1
-Stable tag: 2.1.6
+Stable tag: 2.1.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -36,6 +36,10 @@ Visit our support forum at array.is and we'll give you a hand.
 1. The theme home page filled with demo content.
 
 == Change Log ==
+= 2.1.7 - 12/15/14 =
+* Added editor styles back in.
+* Cleaned up sidebar styles.
+
 = 2.1.6 - 9/13/14 =
 * Removed editor style dropdown for intro title and highlight styles. These styles can still be used by switching to the Text view and adding a span with the respective class. (.highlight, .intro)
 
