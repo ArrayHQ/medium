@@ -68,7 +68,6 @@
 									<?php } ?>
 
 									<?php if( is_single() ) { ?>
-										<li>&nbsp;</li>
 										<li><?php previous_post_link( '%link', __( '<strong>Previous Post: </strong>', 'medium' ) . '%title' ); ?></li>
 										<li><?php next_post_link( '%link', __( '<strong>Next Post: </strong>', 'medium' ) . '%title' ); ?></li>
 									<?php } ?>

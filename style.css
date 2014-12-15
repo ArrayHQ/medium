@@ -237,6 +237,7 @@ small {
 .header {
 	color: #92999C;
 	font-size: 14px;
+	line-height: 1.6;
 	position: fixed;
 	background: #303739 url(images/sidebar.jpg);
 	z-index: 10;
@@ -248,7 +249,6 @@ small {
 .header hgroup {
 	float: left;
 	width: 100%;
-	border-top: solid 1px #3b4143;
 	padding: 30px 20px;
 	z-index: 100;
 	position: relative;
@@ -283,18 +283,21 @@ small {
 
 /* ===[ Header Search Styles ]=== */
 
+.header-search {
+	position: relative;
+	display: none;
+}
+
 .header .search-form-input {
 	position: relative;
 	display: inline-block;
 	width: 100%;
 	border: none !important;
-	padding: 8px 8px 8px 26px !important;
-	font-size: 11px;
+	padding: 12px 8px 12px 28px !important;
+	font-size: 12px;
 	font-weight: bold;
 	color: #ccc;
-	-webkit-border-radius: 2px;
-	-moz-border-radius: 2px;
-	border-radius: 2px;
+	display: none;
 }
 
 .header .search-button {
@@ -320,26 +323,19 @@ small {
 
 .header .search-form-input {
 	position: relative;
-	background: #202527;
+	background: #3A4447;
 	color: #92999C;
-	padding-left: 32px;
-	-webkit-border-radius: 40px;
-	-moz-border-radius: 40px;
-	border-radius: 40px;
+	padding-left: 34px;
 	-webkit-transition: .07s ease-in;
 	-moz-transition: .07s ease-in;
 	-o-transition: .07s ease-in;
 	transition: .07s ease-in;
-	border-top: solid 1px #212628;
-	border-bottom: solid 1px #373d3f;
 	z-index: 10;
 }
 
 .header .search-form-input:focus, .header .search-form-input:hover {
 	color: #fff;
-	box-shadow: inset rgba(0,0,0, 0.25) 0px 0px 10px;
-	-moz-box-shadow: inset rgba(0,0,0, 0.25) 0px 0px 10px;
-	-webkit-box-shadow: inset rgba(0,0,0, 0.25) 0px 0px 10px;
+	background: #434E51;
 	-webkit-transition: .07s ease-in;
 	-moz-transition: .07s ease-in;
 	-o-transition: .07s ease-in;
@@ -352,7 +348,7 @@ small {
 	content: "\f002";
 	font-size: 13px;
 	position: absolute;
-	top: 20px;
+	top: 24px;
 	left: 25px;
 	display: block;
 	z-index: 50;
@@ -436,6 +432,9 @@ footer .search-form .submit {
 
 .menu-toggle {
 	display: none;
+	position: absolute;
+	top: 15px;
+	right: 15px;
 }
 
 .header-nav {
@@ -592,7 +591,7 @@ nav h2 i {
 .post .box {
 	position: relative;
 	margin: 0 auto;
-	padding: 32px 14% 15px 14%;
+	padding: 32px 14% 0 14%;
 }
 
 .page .post .box {
@@ -638,8 +637,7 @@ nav h2 i {
 }
 
 .title-meta {
-	font-size: 11px;
-	font-weight: bold;
+	font-size: 13px;
 	width: 100%;
 	display: inline-block;
 	border-bottom: solid 4px #444;
@@ -833,10 +831,8 @@ blockquote {
 
 #content .meta {
 	font-family: 'Helvetica Neue', Helvetica, sans-serif;
-	font-size: 12px;
-	line-height: 18px;
 	color: #999;
-	margin: 5px 0 15px 0;
+	margin: 5px 0 0 0;
 	padding: 0;
 	width: 100%;
 	display: inline-block;
@@ -1014,8 +1010,7 @@ blockquote {
 }
 
 #respond label {
-	font-size: 13px;
-	font-weight: 500;
+	font-weight: bold;
 	margin: 5px 0 0 0;
 	color: #555;
 }
@@ -1178,8 +1173,6 @@ blockquote {
 
 .comment-text {
 	position: relative;
-	font-size: 14px;
-	line-height: 22px;
 }
 
 .comment-text p {
@@ -1233,8 +1226,6 @@ blockquote {
 
 .comment-notes, .comments .logged-in-as {
 	width: 100% !important;
-	font-size: 13px;
-	line-height: 18px;
 	color: #bbb;
 	margin-bottom: 0 !important;
 	padding-top: 34px;
@@ -1371,6 +1362,7 @@ footer {
 	height: 100%;
 	float: right;
 	font-size: 14px;
+	line-height: 1.6;
 }
 
 .admin-bar footer {
@@ -1440,7 +1432,7 @@ footer .icons {
 .copyright {
 	margin: 0;
 	padding: 32px 20px;
-	font-size: 11px;
+	font-size: 12px;
 	color: #888;
 	border-top: solid 1px #f7f7f7;
 }
@@ -1517,8 +1509,7 @@ img.alignright {
 /* ===[ WPCF7 Styles ]=== */
 
 .wpcf7 p {
-	font-size: 13px;
-	font-weight: 500;
+	font-weight: bold;
 }
 
 input[type="text"], input[type="email"], textarea {
@@ -1688,6 +1679,7 @@ input[type="text"], input[type="email"], textarea {
 	-moz-column-gap: 75px;
 	-webkit-column-gap: 75px;
 	column-gap:75px;
+	overflow: hidden;
 }
 
 .error404 #archive {
