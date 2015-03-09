@@ -49,6 +49,9 @@ function medium_setup() {
 	// Add gallery support
 	add_theme_support( 'array_themes_gallery_support' );
 
+	// Add support for legacy widgets
+	add_theme_support( 'array_toolkit_legacy_widgets' );
+
 	// Register Menu
 	register_nav_menus( array(
 		'main'   => __( 'Main Menu', 'medium' ),
