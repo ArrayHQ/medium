@@ -4,7 +4,7 @@ Theme URI: https://array.is/themes/medium-wordpress-theme/
 Description: Medium is a neatly designed blog-style theme, perfect for sharing photos, videos, quotes, and thoughts.
 Author: Array
 Author URI: https://array.is
-Version: 2.1.8
+Version: 2.1.9
 Tags: white, gray, white, one-column, flexible-width, custom-background, custom-colors, custom-menu, editor-style, featured-images, post-formats, theme-options, translation-ready, photoblogging, threaded-comments
 License: GNU General Public License v2.0
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -300,6 +300,12 @@ small {
 	display: none;
 }
 
+@media only screen and (min-width:768px) {
+	.header .search-form-input {
+		display: inline-block;
+	}
+}
+
 .header .search-button {
 	position: relative;
 	background: #555;
@@ -394,7 +400,7 @@ footer .search-form .submit {
 .logo-text {
 	position: relative;
 	font-family: 'Helvetica Neue', Helvetica, sans-serif;
-	font-size: 28px;
+	font-size: 24px;
 	font-weight: 600;
 	line-height: 32px;
 	margin-bottom: 0;
@@ -441,11 +447,6 @@ footer .search-form .submit {
 	border-bottom: solid 1px #262627;
 	padding: 0 20px 20px 20px;
 	display: inline-block;
-	width: 100%;
-}
-
-.header-nav div {
-	float: left;
 	width: 100%;
 }
 

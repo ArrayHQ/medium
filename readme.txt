@@ -36,7 +36,10 @@ Visit our support forum at array.is and we'll give you a hand.
 1. The theme home page filled with demo content.
 
 == Change Log ==
-= 2.1.8 - 03/09/15 =
+= 2.1.9 - 3/1/16 =
+* Added fix for search widget in left sidebar.
+
+= 2.1.8 - 3/09/15 =
 * Updated for the latest Array Toolkit.
 
 = 2.1.7 - 12/15/14 =
