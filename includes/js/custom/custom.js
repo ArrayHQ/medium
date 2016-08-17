@@ -38,7 +38,7 @@ jQuery(document).ready(function( $ ) {
 
 
 		//Replace Scrollbars
-		enquire.register("screen and (min-width: 755px)", function() {
+		enquire.register("screen and (min-width: 1024px)", function() {
 
 	        $('.nano').toggleClass('overthrow navigation-content');
 
@@ -49,7 +49,7 @@ jQuery(document).ready(function( $ ) {
 
 	    }).listen();
 
-	    enquire.register("screen and (max-width: 755px)", function() {
+	    enquire.register("screen and (max-width: 1024px)", function() {
 	        $('.nano').removeClass('overthrow navigation-content');
 	    }).listen();
 
@@ -63,7 +63,7 @@ jQuery(document).ready(function( $ ) {
 		$( window ).resize( function() {
 			var browserWidth = $( window ).width();
 
-			if ( browserWidth > 768 ) {
+			if ( browserWidth > 1024 ) {
 				$(".header-nav, .header .widgets").show();
 			}
 		} );

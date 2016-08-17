@@ -2,9 +2,9 @@
 Contributors: array
 Donate link: https://array.is/
 Tags: blogging, minimal, portfolio, photo, video
-Requires at least: 3.8
-Tested up to: 4.1.1
-Stable tag: 2.1.8
+Requires at least: 4.0
+Tested up to: 4.5.3
+Stable tag: 2.2.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -36,6 +36,9 @@ Visit our support forum at array.is and we'll give you a hand.
 1. The theme home page filled with demo content.
 
 == Change Log ==
+= 2.2.0 - 8/17/16 =
+* Added fix for tablets. The tablet/mobile view now starts at 1024px instead of 768px.
+
 = 2.1.9 - 3/1/16 =
 * Added fix for search widget in left sidebar.
 
